@@ -1,0 +1,6628 @@
+{
+    "$schema": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+	"_meta": {
+		"sources": [
+			{
+				"json": "tct",
+				"abbreviation": "TCT",
+				"color": "c700d1",
+				"full": "The Compendia Toleverica",
+				"authors": [
+					"Senna Illirotor"
+				],
+				"version": "1.1.3"
+			}
+		],
+		"currencyConversions": {
+			"GalateumStandard": [
+				{
+					"coin": "cp",
+					"mult": 1
+				},
+				{
+					"coin": "sp",
+					"mult": 0.1
+				},
+				{
+					"coin": "gp",
+					"mult": 0.01
+				},
+				{
+					"coin": "pp",
+					"mult": 0.001
+				},
+				{
+					"coin": "lp",
+					"mult": 0.0001,
+					"isFallback": true
+				}
+			]
+		},
+		"dateAdded": 0,
+		"dateLastModified": 0
+	},
+	"spell": [
+		{"name": "Snowball",
+        "level": 0,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "self"
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 1
+                },
+                "concentration": false
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+				{
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "entries": [
+            "A chilly snowball appears in your hand. Any trace of it dissapears after a minute.",
+            "at 5th level, you can create upto two, one appearing in each hand. At level 11, you can create upto three and at level 17, you can create upto four."
+        ],
+        "source": "tct",
+        "components": {
+            "v": true,
+            "s": true
+        },
+        "areaTags": [
+            "ST"
+        ]
+        },
+		{"name": "Blowback",
+        "level": 0,
+        "school": "V",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+				{
+                    "name": "Wizard",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "entries": [
+            "A small firey explosion bursts in your hand producing a strong shockwave behind you. Make a melee spell attack against a creature, dealing {@damage 1d10} fire damage on a hit. Regardless of wether this attack hits, any creature within 5 ft. in the opposite direction of the attack must succeed a Constitution saving throw or take {@damage 1d8} thunder damage",
+            "At level 5, the damage increases to {@damage 2d10} fire and {@damage 2d8} thunder, at level 11 the damage increases to {@damage 3d10} fire and {@damage 3d8} thunder and at level 17 the damage increases to {@damage 4d10} fire and {@damage 4d8} thunder"
+        ],
+        "source": "tct",
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "A pinch of gunpowder"
+        },
+        "areaTags": [
+            "ST"
+        ],
+        "damageInflict": [
+            "fire","thunder"
+        ],
+        "savingThrow": [
+            "constitution"
+        ],
+        "miscTags": [
+            "MAC"
+        ]
+        },
+		{"name": "Clotshot",
+        "level": 0,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 30
+            }
+        },
+        "duration": [
+            {
+                "type": "instant"
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Sorcerer",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Warlock",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "entries": [
+            "Make a melee spell attack against a target within 5 ft. If the attack hits, it takes {@damage 1d6} necrotic damage as you drain and harden some blood from the creature to shape it into a dart. You then send it flying to a creature you can see within range as a ranged spell attack taking {@damage 1d4} damage on a hit. This spell does not work if the first target does not possess blood.",
+            "At certain levels, both amounts of damage increase. {@damage 2d6} and {@damage 2d4} at level 5. {@damage 3d6} and {@damage 3d4} at level 11. {@damage 4d6} and {@damage 4d4} at level 17."
+        ],
+        "source": "tct",
+        "components": {
+            "v": false,
+            "s": true,
+            "m": "A dried up leech"
+        },
+        "areaTags": [
+            "MT"
+        ],
+        "damageInflict": [
+            "necrotic","piercing"
+        ],
+        "miscTags": [
+            "SGT"
+        ]
+        },
+		
+		{"name": "Transfusion",
+        "level": 0,
+        "school": "N",
+        "time": [
+            {
+                "number": 1,
+                "unit": "minute"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "touch"
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 10
+                },
+                "concentration": true
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Warlock",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Cleric",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "entries": [
+            "You must be a humanoid possessing blood to cast this spell. You touch another humanoid possessing blood and siphon blood either into it or from it. Each turn after the spell is cast, the creature losing blood will lose {@damage 1d10} hipoints while the recipient will gain that amount.",
+            "If the creature is unwilling to transfer blood it must be grappled or restrained for this spell to work."
+        ],
+        "source": "tct",
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "A cured leech"
+        },
+        "areaTags": [
+            "ST"
+        ],
+        "miscTags": [
+            "HL"
+        ]
+        },
+		{"name": "Rusting Rain",
+        "level": 5,
+        "school": "C",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 300
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 10
+                },
+                "concentration": true
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Wizard",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Artificer",
+                    "source": "TCE"
+                },
+				{
+                    "name": "Druid",
+                    "source": "PHB"
+                },
+				{
+                    "name": "Warlock",
+                    "source": "PHB"
+                }
+				
+            ]
+        },
+        "entries": [
+            "A sulphurous cloud manifests in the area within range of your choosing, showering those at it's mercy with a downpour corrosive droplets of a strong acid.",
+            "Creatures in the storm's cylindrical area of 30 ft. radius and height, must make a Dexterity saving throw when the storm appears or if they end their turn there. They take {@damage 9d4} acid damage on a failure as or half as much on a success.",
+			"Creatures armoured by metal such as plate mail or constructs who fail the saving throw also recieve a stacking -1 penalty to their AC. If the armour or creature is magical, the maximum penalty is -3 which disappears after spending a minute outside the rain. Whereas non-magical armor breaks if it provides no bonus to AC.",
+			"Damaged armor may be repaired with {@item smith's tools} or the {@spell mending} spell."
+        ],
+        "entriesHigherLevel": [
+            {
+                "type": "entries",
+                "name": "At Higher Levels",
+                "entries": [
+                    "For every level greater than 5th level that this spell is cast at, it deals an extra {@damage 2d4} damage."
+                ]
+            }
+        ],
+        "source": "tct",
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "A piece of gelatinous cube"
+        },
+        "areaTags": [
+            "Y"
+        ],
+        "damageInflict": [
+            "acid"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "miscTags": [
+            "MAC","SCL"
+        ]
+        },
+		{"name": "Wield Weather",
+        "level": 6,
+        "school": "T",
+        "time": [
+            {
+                "number": 1,
+                "unit": "action"
+            }
+        ],
+        "range": {
+            "type": "point",
+            "distance": {
+                "type": "feet",
+                "amount": 200
+            }
+        },
+        "duration": [
+            {
+                "type": "timed",
+                "duration": {
+                    "type": "minute",
+                    "amount": 10
+                },
+                "concentration": true
+            }
+        ],
+        "classes": {
+            "fromClassList": [
+                {
+                    "name": "Druid",
+                    "source": "PHB"
+                }
+            ]
+        },
+        "entries": [
+            "You wield the very forces behind natural phenomena and harness them like puppet strings. Depending on the natural phenomena occuring within 5 miles of you, you may manifest a controlled portion of it to aid you. Choose a phenomenon when this spell is cast and you gain it's following benefits",
+			{
+				"type": "entries",
+				"name": "Sunny Noon",
+				"entries": [
+					"A beam of concentrated sunlight fills a cylindrical area 20 ft. wide and 60 ft. tall. Creatures moving into or starting their turn in the area are affected as though by the {@spell sunbeam} spell. You may use an action thereafter to move the beam upto 30 ft. horizontally in any direction."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Full Moon",
+				"entries": [
+					"A beam of concentrated moonlight fills a cylindrical area 20 ft. wide and 60 ft. tall. Creatures moving into or starting their turn in the area are affected as though by the {@spell moonbeam} spell cast at 6th level. You may use an action thereafter to move the beam upto 60 ft. horizontally in any direction."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Fog",
+				"entries": [
+					"You may shape any instance of fog within range in any manner you seek when you cast this spell. Additionally, you may darken or lighten so as to be lightly or heavily obscured. You may change the fogs properties and shape as a bonus action on subsequent turns."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Rain",
+				"entries": [
+					"You gain control of the intensity and the location of the showers. When you cast this spell, you may create a area of 60 ft. wide cylinder reaching to the clouds where the rain doesn't fall. You may also use a bonus action to increase the intensity to a torrent, making the area within range heavily obscured and deafening to be in, or decrease it to a light drizzle."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Hail",
+				"entries": [
+					"As a bonus action you may increase or decreae the intensity of a hailstorm within range. Additionally, when you cast this spell, you may create a 30 ft. wide and 60 ft. tall column of hail. Creatures moving into or starting their turn in the area must make a Dexterity saving throw or take {@damage 4d10} bludgeoning and {@damage 2d10} cold damage. A creature must spend 2ft. of movement for every foot it moves in the area. "
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Thunder Storm",
+				"entries": [
+					"When you cast this spell and on the start of every subsequent turn, roll a d20. Nothing happens if you roll a 1 or 2, but if you roll between 3-18 you may use a bonus action on this turn create a lightning strike like one in the {@spell call lightning} spell cast at 6th level. If you roll a 19 or 20, you may use an action to summon an arc of bouncing lightning as though you cast {@spell chain lightning}."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Tornado",
+				"entries": [
+					"Utilizing the rotational force of the whirlwind you are able to create a miniature of it within range. The creation and control of it works as though you cast {@spell whirlwind}.",
+					"Additionally, when dealing with a natural tornado, you may use a bonus action to grant you and any creatures of your choice within 30 ft. advantage on any saves or checks to resist any of it's effects. You may also use an action to speed up or slow down the progress of a tornado by upto 60 ft. per round"
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Rainbow",
+				"entries": [
+					"You tap into the prismatic forces within the rainbow and are able to channel it as devastating beams. When you cast this spell, You create a cone of rainbow light as though you {@spell prismatic spray} but instead, roll 3 d8s for each target, ending the spell. One you use this feature of the spell you cannot use it again for 3 days."
+				]
+			},
+			"This spell may work differently on planes outside of the material"
+        ],
+        "source": "tct",
+        "components": {
+            "v": true,
+            "s": true,
+            "m": "A pouch of licorice root shavings"
+        },
+        "areaTags": [
+            "ST"
+        ],
+        "damageInflict": [
+            "cold","bludgeoning","radiant"
+        ],
+        "savingThrow": [
+            "dexterity"
+        ],
+        "miscTags": [
+            "LGTS","OBS","RO","SGT","UBA"
+        ]
+        },
+		{
+			"name": "Fool Me Once",
+			"source": "tct",
+			"level": 4,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take after succeeding on a saving throw"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As you succeed on a saving throw, you become {@condition invisible} and an illusory duplicate of you appears to fail the saving throw and undergo the effects. The double suffers a horrific fate of your own devising, the result of which leaves it dead or {@condition incapacitated}. The illusion may include minor environmental changes as a result of the duplicate's presumed actions, such as a broken window the duplicate appears to have fallen through.",
+				"The illusion lasts for the duration. You remain {@condition invisible} for the duration, unless until you attack or cast a spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Trickery Domain",
+							"source": "PHB",
+							"shortName": "Trickery"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "The Undying",
+							"source": "SCAG",
+							"shortName": "Undying"
+						}
+					}
+				]
+			}
+		},
+		{"name": "Throwing Arm",
+		"level": 2,
+		"school": "C",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "self"
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 10
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "PHB"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You manifest a floating spectral arm-like object that assists you in hurling weapons at your foes. After you cast this spell you may use a bonus action to make the arm draw a light weapon from the material component and throw it as part of the same action. Make a thrown weapon attack with but with your spellcasting ability for the attack and damage rolls.",
+			"Alternatively, you may use the hand to assist you in throwing a weapon. If using your action to make a thrown weapon attack, you can use your bonus action to grant you advantage on one attack."
+		],
+		"source": "tct",
+		"components": {
+			"v": false,
+			"s": true,
+			"m": "A container of light weapons"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"miscTags": [
+			"UBA"
+		]
+		},
+		{"name": "Rimeburst",
+		"level": 5,
+		"school": "C",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "instant",
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorceror",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You conjure a large shard of ice and send it hurtling towards a creature you can see within range. That creature must make a Dexterity saving throw, taking {@damage 6d10} cold damage on a failure and half as much on a success.",
+			"Regardless of the result the shard bursts in a 30 ft. cone in a direction of your choice originating from the target spraying those affected with sharp ice. Targets in the cone's area must make a Dexterity saving throw, taking {@damage 4d10} Piercing damage on a failure or half as much on a success."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 5th level that this spell is cast at, it deals an extra {@damage 1d10} damage of each type."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A vial of water and a pinch of salt"
+		},
+		"areaTags": [
+			"ST","C"
+		],
+		"damageInflict": [
+			"cold","piercing"
+		],
+		"savingThrow": [
+			"dexterity"
+		],
+		"miscTags": [
+			"SGT","SCL"
+		]
+		},
+		{"name": "Varkeno's Veneer",
+		"level": 3,
+		"school": "A",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 30
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 10
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				},
+				{
+					"name": "Paladin",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"Select two allies within sight and range when this spell is cast. For the duration of the spell they recieve a +3 bonus to their AC along with you",
+			"For each attack that any beneficiary dodges, the bonus reduces by 1 though the spell does not end when the bonus reaches zero. You may use a bonus action to spend a 3rd level spell slot to replenish the bonus back to +3 at any point."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A piece of amber worth 50 GP"
+		},
+		"areaTags": [
+			"MT"
+		],
+		"miscTags": [
+			"MAC"
+		]
+		},
+		{"name": "Mind Mold",
+		"level": 5,
+		"school": "E",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Bard",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"With a few words you turn a targets brain sour. A targeted creature who can hear you within range must succeed a Intelligence saving throw or take {@damage 5d6} psychic damage and {@damage 5d6} necrotic damage or half of each on a success.",
+			"A target without a brain is immune to this damage."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 5th level that this spell is cast at, it deals an extra {@damage 1d6} damage of each type."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": false,
+			"m": "A clockwork mechanism"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"damageInflict": [
+			"psychic","necrotic"
+		],
+		"savingThrow": [
+			"intelligence"
+		]
+		},
+		{"name": "Wetvision",
+		"level": 3,
+		"school": "D",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "self"
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "hour",
+					"amount": 1
+				},
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Druid",
+					"source": "PHB"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You grant yourself the ability to percieve through the touch of water. For the duration of the spell you are able to percieve everything that shares contact of the same body of water with you to a distance of 120 ft.",
+			"Be it a pond, a lake, a river or even the same parcel of rain, you can see and make out the position and form of creatures within even if they are {@condition invisible}"
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A vial of dolphin blood"
+		},
+		"areaTags": [
+			"ST"
+		]
+		},
+		{"name": "Coulette's Concussor",
+		"level": 4,
+		"school": "V",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 120
+			}
+		},
+		"duration": [
+			{
+				"type": "instant",
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You manifest a bubble of thunderous energy and launch it towards your foes, launching them in turn. You shoot this ball directly to a point you can see, forming a 30 ft. cone of effect at that point, expanding away from you.",
+			"Creatures caught in the area must succeed on a Strength saving throw or be thrown 15 ft. away and recieve {@damage 4d10} thunder damage or half as much on a success."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 4th level that this spell is cast at, it deals an extra {@damage 1d10} thunder damage."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A hollow metallic sphere"
+		},
+		"areaTags": [
+			"C"
+		],
+		"damageInflict": [
+			"thunder"
+		],
+		"savingThrow": [
+			"strength"
+		],
+		"miscTags": [
+			"FMV","SCL"
+		]
+		},
+		{"name": "More Magic Missiles",
+		"level": 4,
+		"school": "V",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 120
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You produce 8 glowing darts of magical force that revolve around you while you concentrate on this spell. As part of casting this spell or with an action on every subsequent turn, you can send upto 3 darts to hit a creature of your choice that you can see within range. A dart deals {@damage 1d6+1} force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.",
+			"You may also use a bonus action to send 1 dart towards a creature. This spell does not affect targets defended by the {@spell shield} spell or any other effect that nullifies the {@spell magic missile} spell."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 4th level that this spell is cast at, you produce an additional 2 darts."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true
+		},
+		"areaTags": [
+			"ST","MT"
+		],
+		"damageInflict": [
+			"force"
+		],
+		"miscTags": [
+			"SCL","SGT","UBA"
+		]
+		},
+		{"name": "Even More Magic Missiles",
+		"level": 8,
+		"school": "V",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 120
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "hour",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				}
+
+			]
+		},
+		"entries": [
+			"You produce a whopping 25 glowing darts of magical force that swirl around you while you concentrate on this spell. As part of casting this spell or with an action on every subsequent turn, you can send upto 5 darts to hit a creature of your choice that you can see within range. A dart deals {@damage 1d8+1} force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.",
+			"You may also use a bonus action to send up to 2 darts towards creatures of your choice. This spell does not affect targets defended by the {@spell shield} spell or any other effect that nullifies the {@spell magic missile} spell."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"At level 9, you instead produce 28 darts."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true
+		},
+		"areaTags": [
+			"ST","MT"
+		],
+		"damageInflict": [
+			"force"
+		],
+		"miscTags": [
+			"SGT","SCL","UBA"
+		]
+		},
+		{"name": "Discharge Defense",
+		"level": 3,
+		"school": "V",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "self"
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 10
+				},
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"A thin imperceptible veneer of glowing static covers your body occassionally producing small arcs of lightning. You can end the spell early by using an action to dismiss it.",
+			"The veneer grants you resistance to lightning damage, and whenever a creature within 10 feet of you hits you with a melee attack, the shield discharges unto the attacker. The attacker takes {@damage 1d12} lightning damage."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"When you cast this spell using a spell slot of 5th or 6th level, the damage increases to {@damage 2d12}. When you cast it using a spell slot of 7th, 8th or 9th level, the damage increases to {@damage 3d12} and you gain immunity to Lightning damage."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": false,
+			"m": "A glass rod"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"damageInflict": [
+			"lightning"
+		],
+		"miscTags": [
+			"SCL"
+		]
+		},
+		{"name": "Desiccation",
+		"level": 5,
+		"school": "T",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "touch"
+			}
+		},
+		"meta": {
+			"ritual": true
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "hour",
+					"amount": 2
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Druid",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"The atmosphere and your surroundings lose their water to your very touch. Touch a point on a surface as part of this spell and a cubic area 200 ft. on each side around the point begins to lose water and moisture.",
+			"At the end of the first 10 minutes, the air within the area becomes completely parched. any effect that deals fire damage in this area will deal an additional {@damage 2d6} fire damage. After the spell ends, the air goes back to its normal humidity within an hour",
+			"Every subsequent 10 minutes after the first, every non-magical source of water will lose either half its water or 10 gallons of it, whichever is larger. Now on, you may begin to see small non-magical plants shrivel and die.",
+			"After an hour you will see larger non-magical plants like trees wither and die and plant creatures fighting in this area will have disadvantage on all attacks and saving throws."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A jar of salt"
+		},
+		"areaTags": [
+			"C"
+		]
+		},
+		{"name": "One-Man Band",
+		"level": 3,
+		"school": "I",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "self"
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 10
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Bard",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You manifest a magical set of illusory instruments as equipment and some other illusory visual spectacles like fireworks, streamers or confetti to demand your audience's attention, willing or otherwise. While concentrating on this spell, These instruments play themselves and other visual distractions work in a manner you see fit.",
+			"While you may be heard and seen from further, creatures within 120 ft. of you who can hear and see you will have disadvantage on their Wisdom(Perception) checks using sight or sound."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A musical instrument"
+		},
+		"areaTags": [
+			"S"
+		]
+		},
+		{
+			"name": "Violent Scream",
+			"source": "tct",
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You scream and emit a 30-foot cone of damaging sound. Each creature in the cone takes {@damage 8d8} thunder damage and is {@condition deafened} for one minute, or takes half damage and is not {@condition deafened} with a successful Constitution saving throw."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"For each spell slot used higher than 5th level, violent scream does an additional {@damage 1d8} damage."
+					]
+				}
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+			
+		},
+		{
+			"name": "Spell Legs",
+			"source": "tct",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You gain control of one non-instantaneous, area effect spell within range whose area is not centered on an object or a creature, such as stinking cloud or flaming sphere. When you cast spell legs, and at the beginning of each of your turns, you can move the targeted area of effect up to 20 feet in any direction.",
+				"If the original spell was not cast by a willing creature and has a duration of \"concentration\" , you must make an opposed ability check at the beginning of each of your turns, pitting your spellcasting ability against the original caster's. You can move the spell if you win the contest; otherwise, the spell behaves normally."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Godrage",
+			"source": "tct",
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You fill yourself with righteous fury and bring down the wrath of your god. You are surrounded by a brilliant glowing light that sheds bright light to 5 feet and dim light a further 5 feet. For the duration, you gain advantage for all melee weapon attacks, and you inflict an additional {@damage 2d10} force damage with a successful attack. In addition, your AC improves by 2, you can't be {@condition charmed}, {@condition frightened}, or {@condition poisoned}, and you have advantage on Wisdom saving throws. Finally, you score a critical hit on a roll of 19 or 20, instead of just 20.",
+				"On subsequent turnsYou must use your action to make a melee attack each round while this spell is active. If you choose to take a different action, the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a spell slot of 6th-level or higher, the damage increases by {@dice 1d10} for each slot level above 5th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Electromagnetic Pulse",
+			"source": "tct",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a tiny glass globe with silver filigree worth 250 gp"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You release a burst of electric energy that fills the area, spreading around corners. Each creature besides you in the area must make a Constitution saving throw, taking {@damage 3d12} lightning damage on a failed save or half as much damage on a successful one.",
+				"Additionally, each active spell or magical effect in the area whose spell level is no more than half the level of the slot used to cast this spell is automatically dispelled. For each other spell or magical effect in the area, make an ability check using your spellcasting ability. The DC of this check equals 10 plus the spell's level. On a success, the spell ends."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@dice 1d12} for each slot level above 5th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					}
+				]
+			}
+			
+		},
+		{
+			"name": "Blades of Bone",
+			"source": "tct",
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a needle made from bone"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"One willing creature you touch sprouts long, sharp spurs of bone all over its body. The creature does {@damage 2d6} piercing damage to its target when it successfully initiates a grapple. It does another {@damage 2d6} damage at the start of its turn to any creature it has {@condition grappled}."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Basilisk Glare",
+			"source": "tct",
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a stone chip"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"When you cast this spell, your eyes glow ruby-red, causing you to shed dim light in a 10-foot radius. On each of your turns, you may use your action to force a creature within range to make a Constitution saving throw, as long as you can see that creature's eyes. On a failure, the creature is {@condition petrified} for 1 minute.",
+				"The creature may make a new saving throw at the end of each of its turns, ending the effect on a success."
+			],
+			"conditionInflict": [
+				"petrified"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Unluck",
+			"source": "tct",
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a shard of broken mirror"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"On each of your turns, you can use a bonus action to choose a creature within range and curse it with bad luck. The next ability check, attack roll, or saving throw the creature makes before the start of your next turn is made with disadvantage.",
+				"You cannot choose to curse the same creature on two consecutive turns. A creature with the Lucky feat or that is attuned to a stone of luck or a luck blade can't be affected by this spell. Halflings have no particular resistance to this spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Silver Shield",
+			"source": "tct",
+			"level": 4,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You and each creature you choose within range is surrounded by a protective silver aura. Each creature affected by the aura gains a +5 bonus to AC for the duration of the spell. The effect ends for a creature when it attacks or casts a harmful spell."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Mystic Bolt",
+			"source": "tct",
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a glass bottle"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You send a bolt of psychic energy through the target's mind, causing the creature to suffer from a terrible, throbbing headache. The creature must make an Intelligence saving throw, taking {@damage 4d8} psychic damage on a failed save, or half as much on a successful one. In addition, on a failed save, the creature has disadvantage on Intelligence, Wisdom, and Charisma ability checks and saving throws for the duration, as well as on Constitution saving throws to avoid losing concentration."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th-level or higher, the damage increases by {@dice 1d8} for each slot level above 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Magic Eye",
+			"source": "tct",
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a dried eyeball and an eye agate worth 10gp, which the spell consumes"
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"trigger",
+						"dispel"
+					]
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create a magical sensor on an object within range. Then determine the circumstance that will trigger the spell to activate.",
+				"When that circumstance occurs, the eye appears on the object and you receive a mental ping, as long as you are on the same plane of existence. If the object you chose has an eye or something that looks like an eye (for example, the eye of a statue), the magic eye will appear there. You can then use your action to see through the magic eye until the start of your next turn, for up to 1 minute. During this time, you are blind with regard to your own senses. At the end of that time, the eye vanishes from view. When you cast this spell, you can have the spell end after it pings you and you look through it, or it can remain and reappear whenever the trigger occurs.",
+				"The triggering circumstance can be as general or as detailed as you like, though it must be based on visual conditions that occur within 30 feet of the object. For example, you could instruct the eye to activate when any creature moves within 30 feet of it, or only when specific types of creatures move within 30 feet of it."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Light Control",
+			"source": "tct",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 50
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You control the illumination in a 30-foot-radius sphere centered on a point you can see, choosing whether it's full darkness, dim light, or bright light. You can change the level of illumination by one level as a free action when you cast the spell and at the beginning of each of your turns.",
+				"Other forms of illumination initially function normally within the zone, but you can change their effectiveness on your subsequent turns."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Hellish Hail",
+			"source": "tct",
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a small rod made of metal"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"A hail of tiny flaming meteors pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes {@damage 3d8} bludgeoning damage and {@damage 5d6} fire damage on a failed save, or half as much damage on a successful one.",
+				"The flaming meteors turn the storm's area of effect into difficult terrain until the end of your next turn, and it ignites flammable objects in the area that aren't being worn or carried."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by {@dice 1d8} for each slot level above 4th."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Forest Home",
+			"source": "tct",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 12
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You create an earthen shelter under the roots of a tree. A door appears at the base of the tree, or in the ground if the tree is not wide enough for a door. When opened, the door reveals steps that lead down into a 15-foot-square room. You can select up to nine individuals who can open the door and enter the underground space. You also designate the shelter's ambient temperature.",
+				"The shelter keeps occupants safe from storms, forest fires, and other natural hazards. The door is visible to anyone passing nearby with only a DC 10 Wisdom (Perception) check. It can be forced open with a Strength (Athletics) check, or it can be destroyed like any normal, 2-inch-thick wooden door.",
+				"Characters or creatures inside the shelter when the spell ends are expelled violently as the earth closes around them, and they take {@dice 3d6} points of bludgeoning damage in the process."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Earthburst",
+			"source": "tct",
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "piece of volcanic rock"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You touch the ground and send a furrow of displaced earth 5 feet wide toward a point you can see. Upon reaching the target point, the earth erupts in a cylinder 30 feet in radius and 30 feet high. Creatures that were standing on top of the furrow as it passed underfoot are knocked {@condition prone} unless they make successful Dexterity saving throws. Creatures in the area of the eruption take {@damage 7d6} bludgeoning damage and are knocked {@condition prone}, or take half damage and are not knocked {@condition prone} with a successful Dexterity saving throw."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"For each spell slot used higher than 4th level, the spell does an additional {@damage 1d6} damage."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Exaltation",
+			"source": "tct",
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a flask of holy water and powdered sapphire worth 100 gp"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"With this spell, provide aid, protection, and joyful feelings to a willing creature you touch; you can't cast this spell on yourself. For the duration, the creature radiates a pale glow that sheds dim light to a 5-foot radius and gains the following benefits:",
+				"• The creature can't be {@condition frightened} or {@condition poisoned}, and it can't be rendered {@condition unconscious} unless it is reduced to 0 hit points. If it had been suffering from one of those conditions before you cast exultation, the condition is paused while this spell is in effect.",
+				"• While the creature has less than 6 levels of {@condition exhaustion} it doesn't suffer from its effects while this spell is in effect.",
+				"• The creature gains a number of temporary hit points equal to 10 + your caster level. When the spell ends, the target loses any remaining temporary hit points from this spell.",
+				"• The creature has advantage on Charisma (Intimidation) and Charisma (Persuasion) ability checks.",
+				"• Once while this spell is active, the creature may roll a {@dice d6} and add the number rolled to any ability to check or saving throw it makes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th-level or higher, the creature gains an additional 5 temporary hit points for each slot level above 3rd. In addition, when you cast this spell with a spell slot of 6th or 7th-level, the die becomes a {@dice d8}. When you cast this spell with a spell slot of 8th or 9th-level, the die becomes a {@dice d10}."
+					]
+				}
+			],
+			"miscTags": [
+				"THP"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Diary",
+			"source": "tct",
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a vial of ink worth 1gp, which is consumed in the casting"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"You magically record the events of your day in a diary, which you must hold or keep on your person while this spell is in effect. The spell causes thoughts you focus on to appear in the diary, in your handwriting. It doesn't write your every stray thought; rather, it records your deliberate internal narration, in whatever language you think them in. (You should inform the DM what you are actually recording while this spell is active.)",
+				"You can also cause images to appear in your diary, but you must spend time concentrating (as if concentrating on a spell) on the image you want to appear. In general, 1 minute is enough for for a rough sketch, 10 minutes is enough for a simple drawing, and 30 minutes is enough for a complex drawing. The quality of the art you produced is commensurate with your own artistic skill, but is still very rough. If you lose concentration before your drawing is complete, your drawing vanishes.",
+				"The spell ends if the diary is ever moved more than 5 feet from you or if it runs out of pages; you receive a mental alert if your diary is close to being full.",
+				"This spell only records your direct narration. You can't use it to record other people, either spoken aloud or transmitted telepathically."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Awaken Sin",
+			"source": "tct",
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"When cast on an evil creature with an Intelligence of 5 or higher, this spell causes feelings of intense guilt and shame to well up in that creature's mind. It must make a Wisdom saving throw or take {@damage 5d10} psychic damage. If this brings the target to 0 hit points, it is instead reduced to 1 hit point and falls {@condition unconscious} instead of dying. Upon waking up, the creature must make a second Wisdom saving throw or have its hit point total reduced by {@dice 3d10}. This reduction remains until a {@spell greater restoration} or similar spell is cast upon it."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Garn's Rainbow Beam",
+			"source": "tct",
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a clear gem or crystal prism worth at least 50 gp",
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You draw forth a beam of elemental light and fire it at a creature you can see within range. Make a ranged spell attack to hit. You may attempt a DC 13 Intelligence (Arcana) check to choose the beam's color; otherwise, it is randomly determined. You may not attempt to create a multihued beam. The beam does {@damage 3d10} damage of a type determined by its color; the target may make a Dexterity saving throw for half damage. Roll a {@dice d8} to determine the color.",
+				"{@dice d8}\tBeam's Color",
+				"1\tRed (force damage)",
+				"2\tOrange (fire damage)",
+				"3\tYellow (acid damage)",
+				"4\tGreen (poison damage)",
+				"5\tBlue (lightning damage)",
+				"6\tIndigo (cold damage)",
+				"7\tViolet (radiant damage)",
+				"8\tMultihued; roll twice and ignore further rolls of 8.",
+				"The beam stops once it hits a solid object, even if that object is transparent."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a 3rd-level spell slot or higher, it does an additional {@damage 1d8} damage per slot level above 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bone Blade",
+			"source": "tct",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "A sharp shard of bone"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"The material component for this spell is transformed into a large sword made of bone. This magic sword lasts until the spell ends. It counts as a simple melee weapon with which you are proficient. It deals {@damage 2d6} slashing damage on a hit and has the finesse, light, and thrown properties (range 20/60). If you strike an undead creature with this weapon, it must make a Constitution saving throw, taking an additional {@damage 4d8} force damage on a failed save, or half as much on a successful one. In addition, until the end of your next turn, the undead can't regain hit points and has disadvantage on Wisdom saving throws to avoid being turned.",
+				"If you wield the sword yourself, the duration is 1 minute. If you give the sword to another creature to wield, the duration is concentration, up to 1 minute."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Weapon of the Earth",
+			"source": "tct",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a chunk of iron ore"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You can transform a chunk of earth or stone into a magical melee weapon of a type in which you are proficient. The chunk of earth or stone must weigh at least as much as the weapon you wish to make. If a creature other than you attempts to use the weapon, it crumbles back into earth or stone and the spell ends. The weapon is considered magical."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a 3rd or 4th-level spell slot, the weapon gains a +1 bonus to hit and damage. When you cast it using a 5th or 6th-level spell slot, the weapon gains a +2 bonus. When you use a 7th-level or higher spell slot, the weapon gains a +3 bonus."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Kiss of Vampirism",
+			"source": "tct",
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Your kiss drains the life out of your target. You target takes {@damage 1d10} necrotic damage and you regain hit points equal to half the amount of necrotic damage dealt.",
+				"You must be able to kiss the target's skin (although you do not need to kiss its lips). If the creature is in combat, you must succeed at a melee spell attack to kiss it; if not in combat, the creature must be willing to be kissed, {@condition restrained}, or unaware."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell with a 2nd-level or higher spell slot, your kiss causes an additional {@damage 1d10} necrotic damage for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Gravity Pulse",
+			"source": "tct",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You concentrate gravity around your body. Each creature within 15 feet of you must make a Strength saving throw. On a failed save, a creature takes {@damage 2d8} bludgeoning damage and be pulled up to 10 feet toward you. On a successful save, it takes half as much damage and is not pulled toward you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d8} for each slot level above 1st."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Drawmij's Scent Mask",
+			"source": "tct",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a scentless flower"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"One creature you touch is rendered scentless and cannot be tracked by smell.",
+				"This spell can be cast on a creature that attacks through scent, such as a skunk or troglodyte. That creature may make a Constitution saving throw to resist. On a failure, it cannot use this attack for the duration."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Drawmij's Light Step",
+			"source": "tct",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a bit of cat fur and a duck's feather"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You or one willing creature you touch is granted a the ability to walk at a normal pace without leaving tracks or disturbing the ground below it. The creature can also walk across relatively calm fluids, such as the surface of a lake, as if it was difficult terrain."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Alyssa's Hunting Hound",
+			"source": "tct",
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a piece of meat"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You summon a fey spirit that takes the form of a white and red  {@creature mastiff}. It is identical to the  {@creature mastiff} from the Monster Manual (page 332), save that its Perception skill bonus is +5. It is friendly to you and your companions. Roll initiative for it, as it has its own turns. It will obey any commands that you issue. If you don't issue commands to it, it will defend itself from hostile creatures, but otherwise takes no actions. The {@creature mastiff} disappears when it drops to 0 hit points or when the spell ends."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Ahrvar's Forgery",
+			"source": "tct",
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "a sample of the handwriting to be copied"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"When you cast this spell, you gain the ability to perfectly mimic one person's handwriting for the next ten minutes."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{"name": "Waning Valor",
+		"level": 4,
+		"school": "E",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 10
+				},
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You instill a target creature you can see within range with false courage. The creature gains 20+4d10 temporary hitpoints.",
+			"Unless the creature gains temporary hitpoints from some other source, the creature will lose 1d10 temporary hitpoints at the start of each of its turns till it has none."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 4th level that this spell is cast at, it grants an additional {@damage 1d10} Temporary hitpoints."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": false,
+			"m": "A juniper berry and container of gin"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"miscTags": [
+			"THP","SCL"
+		]
+		},
+		{"name": "Becloud",
+		"level": 2,
+		"school": "I",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Bard",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You cloud a creatures awareness to exclude your presence. If the creature you can see fails a Wisdom saving throw, it will forget about your presence and will behave as though you do not exist. Attacking or casting a spell while in this state provokes a Wisdom check from the target against your spell save DC, ending the spell on a success.",
+			"This creature will be unable to target you specifically but may still affect you with area effects if they fall in your area. If the creature sees you with Truesight or makes a Wisdom(Perception) check higher than your Spell save DC the illusion is lost."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A flower of scorpion grass"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"savingThrow": [
+			"wisdom"
+		],
+		"miscTags": [
+			"SGT"
+		]
+		},
+		{"name": "Accursed Matrimony",
+		"level": 4,
+		"school": "E",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				},
+				{
+					"name": "Warlock",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"Select a point you can see within range when you cast this spell, creatures standing within 15 ft. of the circle must make a Charisma saving throw. If two or more creatures failed, the caster may select any two of them and have their souls lightly bound.",
+			"If any one of the two are hit by an attack, the other will take {@damage 2d6} necrotic damage.",
+			"This spell does not affect constructs or any other creature without a soul."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 4th level that this spell is cast at, it deals an extra {@damage 1d6} damage."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": false,
+			"m": "Two rings made of lead"
+		},
+		"areaTags": [
+			"S"
+		],
+		"damageInflict": [
+			"necrotic"
+		],
+		"savingThrow": [
+			"charisma"
+		],
+		"miscTags": [
+			"SGT","AAD"
+		]
+		},
+		{"name": "Phoenix Facade",
+		"level": 5,
+		"school": "I",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "instant"
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You tap into a perilous source of life for a dire cause. When you target a creature who is rolling death saves with this spell, it gains 1 hitpoint. The target may then roll upto half their max hitdie and along with the result, add the spellcasting modifier for each hitdie rolled and gain that many temporary hitpoints.",
+			"Until the start of the target's second turn, it has advantage on all saving throws, resistance to all instances of damage, advantage on all attack rolls and has the effects of any existing conditions suppressed except for {@condition petrified}, {@condition invisible} and {@condition prone}.",
+			"For the target's first turn, it gains an additional action which can be used only to take the {@action Attack} (one weapon attack only), {@action Dash}, {@action Disengage}, {@action Hide}, or {@action Use an Object} action.",
+			"At the start of the second turn the target will lose all temporary hitpoints gained from this spell and gain 4 levels of {@condition exhaustion}. Additionally, until its next long rest, it will die after only failing one death save."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A feather of a golden pheasant and a diamond worth 200gp which gets consumed"
+		},
+		"areaTags": [
+			"ST"
+		]
+		},
+		{"name": "Resist Death",
+		"level": 2,
+		"school": "N",
+		"time": [
+			{
+				"number": 1,
+				"unit": "bonus action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 60
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Cleric",
+					"source": "PHB"
+				},
+				{
+					"name": "Druid",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"You grant a creature some proof against their demise. This spell works differently depending on the target:-",
+			{
+				"type": "entries",
+				"name": "Living",
+				"entries": [
+					"If the target is alive, conscious and willing, it bolsters them against finishing blows. If the target is takes damage that reduces it to 0 hitpoints while being the target of this spell they instead drop to 1 hitpoint and gain a level of {@condition exhaustion}, ending the spell."
+				]
+			},
+			{
+				"type": "entries",
+				"name": "Dying",
+				"entries": [
+					"If the target is rolling for death saves, it now rolls it with advantage. On a success, it may roll a hit die and gain hitpoints equal to the result plus the spellcasting modifier and one level of {@condition exhaustion}. If the result of the die roll for the death save is a 20, then it instead revives with half its health and no exhaustion taken."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A vial of strong acid and two copper wires."
+		},
+		"areaTags": [
+			"ST"
+		],
+		"miscTags": [
+			"HL"
+		]
+		},
+		{"name": "Trapping Pit",
+		"level": 2,
+		"school": "T",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 30
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "hour",
+					"amount": 1
+				},
+				"concentration": false
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "TCE"
+				}
+			]
+		},
+		"entries": [
+			"When you cast this spell, a square area of 10ft. on a horizontal surface becomes an invisible entrance to an extradimesional space 15 ft. deep and as wide as its entrance. Any creature that it may accomodate must make a Dexterity saving throw if it walks over the entrance or is standing over it when the spell is cast. A creature who cannot fit will instead experience the area as dificult terrain. ",
+			"A creature that fails this saving throw will fall into the pit while creatures that succeed may shift to an unoccupied position next to the hole they came from before they fell or use their flying speed to stay afloat. The space's walls may be scaled but at half movement without climbing speed.",
+			"Attacks and spells can't cross through the entrance into or out of the extradimensional space, but those inside can see out of it through the square entrance.",
+			"If you cast this spell again while any pits created by you still exist, they disappear. If any creatures or objects exist inside the pit when the spell ends, it is ejected safely onto an unoccupied space closest to the pit."
+		],
+		"source": "tct",
+		"components": {
+			"v": false,
+			"s": true,
+			"m": "a twisted loop of parchment within a wooden pitcher"
+		},
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"When you cast this spell using a spell slot of 3th level or higher, you may make an additonal pit for each level higher than 2nd."
+				]
+			}
+		],
+		"areaTags": [
+			"Q","C"
+		],
+		"savingThrow": [
+			"dexterity"
+		],
+		"miscTags": [
+			"FMV"
+		]
+		},
+		{"name": "Weapon of Wind",
+		"level": 2,
+		"school": "T",
+		"time": [
+			{
+				"number": 1,
+				"unit": "bonus action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "self"
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Ranger",
+					"source": "PHB"
+				},
+				{
+					"name": "Druid",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"Strands of wind come together to envelope a weapon you wield, lending it's power to it. Whenever you land an attack with this weapon against a creature, it must succeed on a Strength saving throw or be pushed 10 ft. away from you.",
+			"The weapon loses its power if you are not wielding it, returning if it is again wielded by you."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": false,
+			"m": "A weapon"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"savingThrow": [
+			"strength"
+		],
+		"miscTags": [
+			"FMV"
+		]
+		},
+		{"name": "Marching Mine",
+		"level": 2,
+		"school": "T",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 30
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Artificer",
+					"source": "TCE"
+				}
+			]
+		},
+		"entries": [
+			"As part of casting the spell you turn a tiny non-magical object in your hand into a walking bomb as it sprouts legs. The object mustn't be attached to another object or a surface or being carried by another creature. As part of the same action, you may throw it upto 30 ft. away",
+			"The mine is an object telepathically controlled by you which moves at the start of your turn. It has an AC of 16 and an HP of 15 and has a walking and climbing speed of 20 ft. It is immune to poison, psychic and necrotic damage.",
+			"If the object is destroyed, duration of the spell ends or if concentration on the spells ends, the object explodes affecting targets in a sphere of a radius of 15 ft., disintegrating the object and ending concentration. Creatures caught in the blast must make a Dexterity saving throw failing which deals {@damage 2d12} fire damage to them or half as much if they succeed",
+			"The object can see normally and you mentally recieve its visual information. While concentrating on the spell, you may use a bonus action to command it to hide, to which it recieves a bonus to its Dexterity(Stealth) check equal to your spellcasting modifier. You may also use a bonus action to give it one charge. It holds a maximum of 3 charges and deals an additional d12 damage for each charge held when it explodes. Additionally the blast radius increases to 20 ft. when fully charged."
+		],
+		"entriesHigherLevel": [
+			{
+				"type": "entries",
+				"name": "At Higher Levels",
+				"entries": [
+					"For every level greater than 2nd level that this spell is cast at, the mine deals an extra {@damage 1d12} damage and may hold an additional charge."
+				]
+			}
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": {
+				"text":"A tiny object, which the spell consumes",
+				"consume":true
+			}
+		},
+		"areaTags": [
+			"S"
+		],
+		"damageInflict": [
+			"fire"
+		],
+		"savingThrow": [
+			"dexterity"
+		],
+		"miscTags": [
+			"SMN","SCL","UBA","OBJ"
+		]
+		},
+		{"name": "Expedite",
+		"level": 7,
+		"school": "T",
+		"time": [
+			{
+				"number": 1,
+				"unit": "action"
+			}
+		],
+		"range": {
+			"type": "point",
+			"distance": {
+				"type": "feet",
+				"amount": 30
+			}
+		},
+		"duration": [
+			{
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": 1
+				},
+				"concentration": true
+			}
+		],
+		"classes": {
+			"fromClassList": [
+				{
+					"name": "Wizard",
+					"source": "PHB"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB"
+				}
+			]
+		},
+		"entries": [
+			"Choose a willing creature that you can see within range. Until the spell ends, the target's speed is tripled, it gains a +3 bonus to AC, it has advantage on Dexterity saving throws, and it gains two additional actions on each of its turns. Those actions can be used only to take the Attack (one weapon attack each only), Dash, Disengage, Hide, or Use an Object action.",
+			"When the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it and it gains a point of {@condition exhaustion}."
+		],
+		"source": "tct",
+		"components": {
+			"v": true,
+			"s": true,
+			"m": "A pouch of licorice root shavings"
+		},
+		"areaTags": [
+			"ST"
+		],
+		"miscTags": [
+			"MAC"
+		]
+		},
+		{"name": "Kinetic Tunnel",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
+				]
+			},
+			"entries": [
+				"Imagine a point 10 ft. away from you. When you cast this this spell, the material component disappears and reappears as a thin speeding projectile at the point, travelling in a direction of your choice for 50 ft. before it vaporizes.",
+				"Creatures in the path of the projectile must succeed a Dexterity Saving Throw or take {@damage 5d8} Piercing damage, taking half the damage otherwise.",
+				"The projectile produces a cracking sound that can be heard 1000 ft. away as it appears."
+			],
+			"source": "tct",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "A blowgun needle, crossbow bolt or a bullet which the spell consumes",
+					"consume": true
+				}
+			},
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"For every level greater than 3rd level that this spell is cast at, it deals an extra {@damage 1d8} damage."
+					]
+				}
+			],
+			"areaTags": [
+				"L"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"damageInflict": [
+				"piercing"
+			]
+		},
+		{"name": "Aristo's Affluent Armory",
+			"source": "tct",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+						"text": "A weapon or piece of ammunition worth at least 10 gold, which the spell consumes",
+						"consume": true
+					}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+					"type": "hour",
+					"amount": 8
+				}
+				}
+			],
+			"entries": [
+				"You open a small portal into an armory through which you can put your arm, drop the material component and grab a weapon. Once you grap a weapon, the portal disappears, leaving a spectral weapon in your hands. The weapon is banished back to the armory after an hour.",
+				"You are considered proficient with the weapon you summon. If you use a magic weapon of (uncommon rarity or above) as this spell's material component, the weapon you receive remains permanently. You can not use this weapon as a component for this spell. Weapons summoned this way also recieve a +1 enchantment if they aren't already a +1 weapon (Unless you roll a 1 for enchantment)",
+				"A weapon summoned by this spell is banished when this spell is cast again. roll a d12 to determine the form of the weapon then roll another d12 to determine the effect it recieves",
+				{	"type": "table",
+					"caption": "Weapon",
+					"colLabels": [
+						"{@dice d12}",
+						"Form"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Choice of unarmed weapon"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"{@item hooked shortspear|oota|Hooked Shortspear}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"{@item whip|phb|Whip}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"A {@item sickle|phb|Sickle}, {@item club|phb|Club} or {@item dagger|phb|Dagger}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"A {@item scimitar|phb|Scimitar},{@item shortsword|phb|Shortsword}, {@item mace|phb|Mace} or {@item handaxe|phb|Handaxe}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"A {@item spear|phb|Spear}, {@item bill|tct|Bill} or {@item quarterstaff|phb|Quarterstaff}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"{@item rapier|phb|Rapier}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"A {@item battleaxe|phb|Battleaxe}, {@item longsword|phb|Longsword} or {@item warhammer|phb|Warhammer}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 9
+								}
+							},
+							"{@item double-bladed scimitar|erlw|Double-Bladed Scimitar}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 10
+								}
+							},
+							"A {@item glaive|phb|Glaive}, {@item halberd|phb|Halberd} or {@item pike|phb|Pike}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 11
+								}
+							},
+							"A {@item greatsword|phb|Greatsword}, {@item Greatspear|tct|Greatspear} or {@item maul|phb|Maul}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 12
+								}
+							},
+							"{@item greataxe|phb|Greataxe}"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Echantment",
+					"colLabels": [
+						"{@dice d12}",
+						"Enchantment"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Mundane"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"{@item Moon-Touched Shortsword|xge|Moon-Touched Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"{@item adamantine weapon|xge|Adamantine Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"{@item weapon of warning|dmg|Weapon of Warning}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"{@item weapon of certain death|egw|Weapon of Certain Death}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"{@item ravaging weapon|tct|Ravaging Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"{@item +2 Weapon|dmg|+2 Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"{@item corpse slayer|egw|Corpse Slayer Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 9
+								}
+							},
+							"{@item Shortsword of Life Stealing|dmg|Weapon of Life Stealing}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 10
+								}
+							},
+							"{@item Frost Brand Shortsword|dmg|Frost Brand Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 11
+								}
+							},
+							"{@item dancing shortsword|dmg|Dancing Weapon}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 12
+								}
+							},
+							"{@item flame tongue|dmg|Flametongue Weapon}"
+						]
+					]
+				}
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level, The weapon you recieve becomes a +2 and you can determine one of either the weapon's form or its enchantment. The summoned weapon lasts for 24 hours before disappearing."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				]
+			}
+		}
+	],
+	"itemProperty": [
+		{"abbreviation": "DIR",
+			"source": "tct",
+			"page":0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Dire",
+					"entries": [
+						"If any of it's damage dice rolls it's maximum, you may roll it again and add the damage. You may repeat the process for each subsequent die rolled."
+					]
+				}
+			]
+		},
+		{
+			"abbreviation": "U",
+			"source": "tct",
+			"page": 0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Unarmed",
+					"entries": [
+						"Attacks with this weapon count as both unarmed and weapon strikes and changes the damage type from bludgeoning to the type mentioned. If you benefit from a feature that improves the damage dice of your unarmed attack, you may choose to use it instead of this weapon's damage dice. While wielding this weapon, you can hold an item in the same hand but you may not use the weapon while doing so."
+					]
+				}
+			]
+		},
+		{
+			"abbreviation": "KEE",
+			"source": "tct",
+			"page": 0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Keen",
+					"entries": [
+						"When you make a critical hit with this weapon, roll an additional weapon damage die."
+					]
+				}
+			]
+		},
+		{
+			"abbreviation": "HY",
+			"source": "tct",
+			"page": 0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Hybrid Weapon",
+					"entries": [
+						"This weapon can be used to make either ranged or melee attacks. It counts as a ranged or melee weapon only when making the respective attacks. The damage die for the weapon may be different depending on the attack made."
+					]
+				}
+			]
+		},
+		{
+			"abbreviation": "EX",
+			"source": "tct",
+			"page": 0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Exotic",
+					"entries": [
+						"This item is rare and not readily available at character creation."
+					]
+				}
+			]
+		},
+		{"abbreviation": "SC",
+			"source": "tct",
+			"page":0,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Scattershot",
+					"entries": [
+						"When you target a medium or smaller creature with this weapon, Make an attack against all creatures within 5 ft. of it at disadvantage. If targeting a larger or bigger creature, roll an additional damage die if the attack hits."
+					]
+				}
+			]
+		}
+		
+	],
+	"item": [
+		{
+			"name": "Lancet",
+			"source": "tct",
+			"value": 80,
+			"type": "A",
+			"rarity": "none",
+			"weight": 1,
+			"entries": [
+				"It is nearly indistinct from a spear were it not for the plumage that would be the fletching on regular arrows. It can be used as a simple melee weapon which behaves like a {@item javelin|phb|javelin}."
+			],
+			"tier": "minor"
+		},
+		{
+			"name": "Shot Pouch",
+			"source": "tct",
+			"value": 60,
+			"type": "A",
+			"rarity": "none",
+			"weight": 0.05,
+			"entries": [
+				"A slighlty brittle pouch coated with black powder, containing shot and gunpowder for use by shotguns."
+			],
+			"tier": "minor"
+		},
+		{"name": "Bob",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 20,
+			"dmg1": "2d4",
+			"dmgType": "P",
+			"property": [
+				"H","A","2H","DIR","LD"
+			],
+			"range": "40/160",
+			"rarity": "none",
+			"source": "tct",
+			"value": 20000,
+			"entries": [
+				"Originally named the 'Chain Assisted Repeating Bow', it came to be colloquially known as 'Bucket o' Bolts' or Bob. due to it's less than reliable nature.",
+				"A complex contraption that appears to be a large crossbow with additional machinery and a large cylinder beneath the barrel which stores the bolts it fires. It is powered by a winch that needs to be wound as a part of a long or a short rest to continue working for another 24 hours.",
+				"As the trigger lever is pressed it releases a small barrage of bolts before it jams and must be reloaded to continue firing",
+				"The cyclinder can store upto 30 {@item crossbow bolt|phb|bolts}. Each d4 rolled is a bolt used",
+				"",
+				""
+			],
+			"ammoType": "crossbow bolt|phb"
+		},
+		{"name": "Bayonet",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"rarity": "none",
+			"source": "tct",
+			"value": 5000,
+			"property": [
+				"F",
+				"L"
+				],
+			"entries": [
+				"A sharp implement usually affixed to some ranged weapons, but still a capable weapon on its own. A ranged weapon with the 'Two-Handed' property (Except for bows) can be turned into a hybrid weapon by attaching a bayonet to it, taking a minute to do so.",
+				"After which it gains the following property:-",
+                {
+					"type": "entries",
+					"name": "Melee Attack",
+					"entries": [
+						"You use the bayonet to stab dealing {@dice 1d4} piercing damage on a hit."
+					]
+				},
+				"",
+				""
+			]
+		},
+		{"name": "Greatbow",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 5,
+			"dmg1": "1d12",
+			"dmgType": "P",
+			"property": ["H","A","2H","EX"],
+			"range": "100/300",
+			"rarity": "none",
+			"source": "tct",
+			"value": 10000,
+			"entries": [
+				"A rather large, and wieldy bow usually used by larger creatures. It uses Strength for its attack and damage rolls.",
+				"Without a Dexterity score of at least 16, all attacks made with it are at disadvantage.",
+				"",
+				"",
+				""
+			],
+			"ammoType": " lancet|tct"
+		},
+		{"name": "Petronel",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 6,
+			"dmg1": "1d8",
+			"dmgType": "P",
+			"property": ["A","LD"],
+			"range": "50/150",
+			"rarity": "none",
+			"source": "tct",
+			"value": 35000,
+			"entries": [
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "renaissance bullet|phb"
+		},
+		{"name": "Rifle",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 12,
+			"dmg1": "1d10",
+			"dmgType": "P",
+			"property": ["A","2H","H","LD"],
+			"range": "90/270",
+			"rarity": "none",
+			"source": "tct",
+			"value": 60000,
+			"entries": [
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "renaissance bullet|phb"
+		},
+		{"name": "Dragon",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 5,
+			"dmg1": "1d8",
+			"dmgType": "P",
+			"property": ["A","LD","SC"],
+			"range": "15/45",
+			"rarity": "none",
+			"source": "tct",
+			"value": 40000,
+			"entries": [
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "shot pouch|tct"
+		},
+		{"name": "Blunderbuss",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 15,
+			"dmg1": "1d10",
+			"dmgType": "P",
+			"property": ["A","LD","SC","2H","H"],
+			"range": "30/90",
+			"rarity": "none",
+			"source": "tct",
+			"value": 40000,
+			"entries": [
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "shot pouch|tct"
+		},
+		{"name": "Meteor Hammer",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 5,
+			"dmg1": "1d4",
+			"dmgType": "B",
+			"property": ["R","2H","EX"],
+			"range": "",
+			"reach":"10",
+			"rarity": "none",
+			"source": "tct",
+			"value": 200,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"You wield this weapon as though you are dual wielding it, allowing you to engage in two-weapon fighting(Dual wielder feat and TWF fighting style applies)"
+					]
+				},
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Rope Dart",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 3,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"property": ["R","F","EX"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 200,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Hoopak",
+			"weaponCategory": "simple",
+			"weight": 2,
+			"property": ["HY","2H","A","F","EX"],
+			"range": "40/160",
+			"rarity": "none",
+			"source": "tct",
+			"value": 10,
+			"entries": [
+				"A hoopak is a sturdy stick with a sling at one end and a pointed tip at the other.",
+				{
+					"type": "entries",
+					"name": "Melee Attack",
+					"entries": [
+						"You use the pointed end of the weapon to stab dealing {@dice 1d6} piercing damage on a hit."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ranged attack",
+					"entries": [
+						"You load a bullet into the sling and launch it with the staff dealing {@dice 1d4} bludgeoning damage on a hit."
+					]
+				},
+				"",
+				""
+			],
+			"ammoType": "sling bullet|phb"
+		},
+        {"name": "Sling",
+			"weaponCategory": "simple",
+			"weight": 1,
+			"property": ["HY","L","A"],
+			"range": "30/120",
+			"rarity": "none",
+			"source": "tct",
+			"value": 10,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Melee Attack",
+					"entries": [
+						"You swing it while it's loaded and deal {@dice 1d4} bludgeoning damage on a hit."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ranged attack",
+					"entries": [
+						"You lob a loaded bullet from the sling dealing {@dice 1d4} bludgeoning damage on a hit."
+					]
+				},
+				"",
+				""
+			],
+			"ammoType": "sling bullet|phb"
+		},
+        {"name": "Blowgun",
+			"weaponCategory": "martial",
+			"weight": 1,
+			"property": ["HY","LD","A","V"],
+			"range": "25/100",
+			"rarity": "none",
+			"source": "tct",
+            "dmg2": "1d8",
+			"value": 1000,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Melee Attack",
+					"entries": [
+						"You treat it as a {@item quarterstaff|phb|quarterstaff} and deal {@dice 1d6} bludgeoning damage on a hit. {@dice 1d8} if held with both hands"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ranged attack",
+					"entries": [
+						"You blow out a loaded needle dealing {@dice 1d1} piercing damage on a hit."
+					]
+				},
+				"",
+				""
+			],
+			"ammoType": "blowgun needle|phb"
+		},
+		{"name": "Katana",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 6,
+			"dmg1": "1d10",
+			"dmgType": "S",
+			"property": ["2H","KEE"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 1500,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Great Scimitar",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 7,
+			"dmg1": "3d4",
+			"dmgType": "S",
+			"property": ["2H","H"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 5000,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Chakram",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 2,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": ["F","T"],
+			"range": "15/45",
+			"rarity": "none",
+			"source": "tct",
+			"value": 100,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Polehammer",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 5,
+			"dmg1": "1d10",
+			"dmgType": "B",
+			"property": ["R","H","2H"],
+			"rarity": "none",
+			"source": "tct",
+			"value": 2000,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Caestus",
+			"type": "M",
+			"weaponCategory": "simple",
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "B",
+			"property": ["U","F","L"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 100,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Spiked Knuckles",
+			"type": "M",
+			"weaponCategory": "simple",
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"property": ["U","F","L"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 100,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Tiger Claws",
+			"type": "M",
+			"weaponCategory": "simple",
+			"weight": 1,
+			"dmg1": "1d4",
+			"dmgType": "S",
+			"property": ["U","F","L"],
+			"range": "",
+			"rarity": "none",
+			"source": "tct",
+			"value": 100,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Double Crossbow",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 4,
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"property": ["A","2H","LD"],
+			"range": "20/60",
+			"rarity": "none",
+			"source": "tct",
+			"value": 12000,
+			"entries": [
+				"You may also fire this weapon using a bonus action",
+				"",
+				"",
+				""
+			],
+			"ammoType": "crossbow bolt|phb"
+		},
+		{"name": "Steppe Bow",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 2,
+			"dmg1": "2d4",
+			"dmgType": "P",
+			"property": ["A","2H"],
+			"range": "60/240",
+			"rarity": "none",
+			"source": "tct",
+			"value": 4000,
+			"entries": [
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "arrow|phb"
+		},
+		{"name": "Tower Bow",
+			"type": "R",
+			"weaponCategory": "martial",
+			"weight": 4,
+			"dmg1": "2d4",
+			"dmgType": "P",
+			"property": ["A","2H","H"],
+			"range": "200/400",
+			"rarity": "none",
+			"source": "tct",
+			"value": 8000,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"Attacks with this weapon are at disadvantage unless it is planted onto the ground. Planting requires a bonus action and a surface like dirt or wood that the weapon can dig into. Once planted the weapon is immobile and require a bonus action to displace it. While planted, it deals 1d4 additional piercing damage on a hit."
+					]
+				},
+				"",
+				"",
+				"",
+				""
+			],
+			"ammoType": "arrow|phb"
+		},
+		{"name": "Hand Shot",
+			"type": "M",
+			"weaponCategory": "simple",
+			"weight": 15,
+			"dmg1": "1d6",
+			"dmgType": "B",
+			"property": ["2H","H","T"],
+			"range": "10/30",
+			"rarity": "none",
+			"source": "tct",
+			"value": 500,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Special",
+					"entries": [
+						"This weapon deals an additional 1d6 bludgeoning damage when thrown."
+					]
+				},
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		
+		{"name": "Lufstalis",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 4,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": ["L","F"],
+			"range": "",
+			"rarity": "legendary",
+			"source": "tct",
+			"entries": [
+				"The Legendary Scimitar wielded by none other than [REDACTED]. It's said to bend the very space around it to land it's attacks",
+				"You have a +2 bonus to attack and damage rolls made with this magic weapon",
+				"If you make a critical hit with this weapon, you may disappear and make 2 additional attacks against creatures of your choice within 30 ft. reappearing 5 ft. near the last creature you attacked.",
+				"",
+				""
+			]
+		},
+		{"name": "Sharp Tongue",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 4,
+			"dmg1": "1d4",
+			"dmgType": "S",
+			"property": ["F","R"],
+			"rarity": "rare",
+			"source": "tct",
+			"reqAttune": true,
+			"entries": [
+				"You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+				"This weapon has 3 charges and it recovers 1d4+1 charges each day",
+				"When a creature that you can see within this weapon's reach makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one charge, attempting to attack it. On a hit, you can roll a d6 and subtracting the number rolled from the creature's roll and dealing that much additional psychic damage. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage.",
+				"",
+				""
+			]
+		},
+		{"name": "Sheath of Gusts",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 1,
+			"dmg1": "1d8",
+			"dmgType": "S",
+			"dmg2": "1d10",
+			"property": ["L","F","V"],
+			"rarity": "uncommon",
+			"source": "tct",
+			"reqAttune": true,
+			"entries": [
+				"This weapon is nothing but a hilt and a sheath. Once attuned to, removing the hilt from the sheath for a brief moment reveals a blade of concentrated raging winds on it, violently dissipating shortly after.",
+				"As part of an attack, you may quickly draw the sword and make one attack after which the blade explodes producing one of the effects as described in the spell {@spell gust|xge|gust} (Save DC 15). ",
+				"The winds regenerate once the blade is sheathed",
+				"",
+				""
+			]
+		},
+		{"name": "Greatspear",
+			"type": "M",
+			"weaponCategory": "martial",
+			"weight": 6,
+			"dmg1": "2d6",
+			"dmgType": "P",
+			"property": ["H","2H"],
+			"rarity": "none",
+			"source": "tct",
+			"value": 5000,
+			"entries": [
+				"It's sometimes called Megalodon. A large spear with 4 teeth affixed to a heavy weight at the end which are sometimes used to disarm opponents.",
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Bill",
+			"type": "M",
+			"weaponCategory": "simple",
+			"weight": 4,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"dmg2": "1d8",
+			"property": ["V"],
+			"rarity": "none",
+			"source": "tct",
+			"value": 50,
+			"entries": [
+				"A short blade affixed to a short pole, sometimes bent like a scythe. Originally used as only a farming implement, but became modified over time to be able to fend off the odd bandit.",
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		{"name": "Jester's Dusters",
+			"type": "M",
+			"weaponCategory": "Martial",
+			"weight": 3,
+			"dmg1": "1d6",
+			"dmgType": "S",
+			"property": ["S","EX"],
+			"rarity": "none",
+			"source": "tct",
+			"value": 50,
+			"entries": [
+				"A rather queer weapon. It consists of hilt, around which tiger claws. Above the hilt is a hammerhead and a dagger below. Whoever made this couldn't make up his mind about how to dispose of his enemy.",
+				"When you make a melee attack with this weapon you choose to deal either slashing, piercing or bludgeoning damage.",
+				"",
+				"",
+				""
+			]
+		}
+	],
+	"feat": [
+		{"name": "Acuity",
+			"source": "tct",
+			"entries": [
+				"Your keen mind allows you to get an edge. Allowing for more reliable precision where your opponents discipline may have prevented it.",
+				"When making a weapon attack, Your critical hit range increases by 1. Apply this after any features that may increase your critical hit range."
+			]
+		},
+		{"name": "Light Sleeper",
+			"source": "tct",
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"wis": 13
+						}
+					]
+				}
+			],
+			"entries": [
+					"A life of diligence allows you to do more. Less time asleep allows for more time to accomplish your goals. Long rests take half as long to finish (to a minimum of 4 hours) as well as short rests."
+			]
+		},
+		{"name": "Parlor Trickster",
+			"source": "tct",
+			"entries": [
+				"You don't need a university's worth of magic, just a little to ease your life and impress others doing it. You learn to use four Cantrips that dont deal damage. The spellcasting modifier for them is your choice of Charisma, Intelligence or Wisdom"
+				
+			]
+		},
+		{"name": "Juggler",
+			"source": "tct",
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"You've thrown things. Thrown a lot of things. Whether its stones, books, wrenches or gauntlets, you've gotten pretty good at hurling objects across distances very fast.",
+					{
+						"type": "list",
+						"items": [
+							"Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+							"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
+							"When you use your action to make a melee attack, you can use you bonus action to make a thrown weapon attack with a light weapon.",
+							"When you use your action to make a thrown weapon attack, you can use your bonus action to make another thrown weapon attack.",
+							"Long range does not impose disadvantage on thrown weapon attacks."
+						]
+					}
+				
+			]
+		},
+		{"name": "Skirmisher",
+			"source": "tct",
+			"prerequisite": [
+				{
+					"ability": [
+						{
+							"dex": 13
+						}
+					]
+				}
+			],
+			"entries": [
+				"You've gotten pretty good at surviving in sticky situations and wedging yourself out of them.",
+				{
+					"type": "list",
+					"items": [
+						"Increase your Dexterity score by 1, to a maximum of 20.",
+						"You can disengage using a bonus action",
+						"Your Movement increases by 5 ft.",
+						"While wielding ranged weapons that don't possess the Heavy property you get +1 AC."
+					]
+				}
+			]
+		}
+	],
+	"class": [
+		{	
+			"name": "Flickwrist",
+			"source": "tct",
+			"casterProgression": "1/3",
+			"spellcastingAbility": "dex",
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"dex",
+				"int"
+			],
+			"cantripProgression": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				18,
+				18,
+				18,
+				18
+			],
+			"spellsKnownProgression": [
+				0,
+				0,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				5,
+				5,
+				6,
+				6,
+				7,
+				7,
+				8,
+				8,
+				9,
+				9,
+				10,
+				10
+			],
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Cantrips Known",
+						"Chore. Cap. Increment",
+						"Spells known"
+					],
+					"rows": [
+						[
+							"3","-","-"
+						],
+						[
+							"4","-","-"
+						],
+						[
+							"5","+1","3"
+						],
+						[
+							"6","-","3"
+						],
+						[
+							"7","-","3"
+						],
+						[
+							"8","-","4"
+						],
+						[
+							"9","-","4"
+						],
+						[
+							"10","+1","4"
+						],
+						[
+							"11","-","5"
+						],
+						[
+							"12","-","5"
+						],
+						[
+							"13","-","6"
+						],
+						[
+							"14","-","6"
+						],
+						[
+							"15","-","7"
+						],
+						[
+							"16","+1","7"
+						],
+						[
+							"17","-","8"
+						],
+						[
+							"18","-","8"
+						],
+						[
+							"-","-","9"
+						],
+						[
+							"-","-","9"
+						],
+						[
+							"-","-","10"
+						],
+						[
+							"-","+1","10"
+						]
+					]
+				},
+				{
+					"colLabels":[
+						"1st",
+						"2nd",
+						"3rd",
+						"4th"
+					],
+					"title":"Spell Slots per Spell Level",
+					"rows":[
+						[
+							"-","-","-","-"
+						],
+						[
+							"-","-","-","-"
+						],
+						[
+							"3","-","-","-"
+						],
+						[
+							"3","-","-","-"
+						],
+						[
+							"3","-","-","-"
+						],
+						[
+							"4","-","-","-"
+						],
+						[
+							"4","2","-","-"
+						],
+						[
+							"4","3","-","-"
+						],
+						[
+							"4","3","-","-"
+						],
+						[
+							"4","3","-","-"
+						],
+						[
+							"4","3","-","-"
+						],
+						[
+							"4","3","-","-"
+						],
+						[
+							"4","3","2","-"
+						],
+						[
+							"4","3","2","-"
+						],
+						[
+							"4","3","2","-"
+						],
+						[
+							"4","3","3","-"
+						],
+						[
+							"4","3","3","-"
+						],
+						[
+							"4","3","3","-"
+						],
+						[
+							"4","3","3","1"
+						],
+						[
+							"4","3","3","1"
+						]
+					]
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light"
+				],
+				"weapons": [
+					"simple weapons",
+					"{@item shortsword|phb|shortswords}",
+					"{@item scimitar|phb|scimitars}"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"Acrobatics",
+								"Athletics",
+								"Medicine",
+								"Investigation",
+								"Performance",
+								"Stealth",
+								"Sleight of Hand"
+							],
+						"count": 2
+						}
+					}
+				],
+				"tools": [
+					"Choose one from Disguise Kit, Calligrapher's supplies, Painter's Supplies, Weaver's Tools, Woodcarver's Tools, Jeweler's Tools, A musical instrument"
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) A {@item scimitar|phb|scimitars} , {@item shortsword|phb|shortsword} or (b) a simple weapon",
+					"(a) A dungeoneer's pack or (b) an entertainer's pack",
+					"(a) 20 {@item dart|phb|darts} or (b) 2 {@item dagger|phb|daggers}",
+					"A Disguise Kit, Calligrapher's supplies, Painter's Supplies, Weaver's Tools, Woodcarver's Tools, Jeweler's Tools or a musical instrument"
+				],
+				"defaultData": [
+					{
+						"a": [
+							"a shortsword|phb or scimitar|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "weaponSimple"
+							}
+						]
+					},
+					{
+						"a": [
+							"dungeoneer's pack|phb"
+						],
+						"b": [
+							"entertainer's pack|phb"
+						]
+					},
+					{
+						"a": [
+							"20 {@item dart|phb|darts}"
+						],
+						"b": [
+							"2 {@item dagger|phb|daggers}"
+						]
+					},
+					{
+						"a": [
+							"One of: Disguise Kit, Calligrapher's supplies, Painter's Supplies, Weaver's Tools, Woodcarver's Tools, Jeweler's Tools"
+						],
+						"b": [
+							"A Musical Instrument"
+						]
+					}
+				],
+				"goldAlternative": "4d4 × 10"
+			},
+			"classFeatures":[
+				"Choreurgy|Flickwrist|tct|1",
+				"Expertise|Flickwrist|tct|1",
+				{
+					"classFeature": "Choreurgic Style|Flickwrist|tct|2",
+					"gainSubclassFeature": true
+				},
+				
+				"Spellcasting|Flickwrist|tct|3",
+				"Power Surge|Flickwrist|tct|3",
+				"Ability Score Improvement|Flickwrist|tct|4",
+				"Augments|Flickwrist|tct|5",
+				
+				{
+					"classFeature": "Style Feature|Flickwrist|tct|6",
+					"gainSubclassFeature": true
+				},
+				"Fleet of Foot|Flickwrist|tct|7",
+				"Ability Score Improvement|Flickwrist|tct|8",
+				"Potent Cantrip|tct|9",
+				{
+					"classFeature": "Style Feature|Flickwrist|tct|10",
+					"gainSubclassFeature": true
+				},
+				"Perpetual Motion|tct|11",
+				"Ability Score Improvement|Flickwrist|tct|12",
+				"Elastic Body|Flickwrist|tct|13",
+				{
+					"classFeature": "Style Feature|Flickwrist|tct|14",
+					"gainSubclassFeature": true
+				},
+				"Minor Magic Resistance|tct|15",
+				"Ability Score Improvement|Flickwrist|tct|16",
+				"Cantrip Mastery|Flickwrist|tct|17",
+				"Esoteric techniques|Flickwrist|tct|18",
+				"Ability Score Improvement|Flickwrist|tct|19",
+				"Opus Vitae|Flickwrist|tct|20"
+				
+			],
+			"multiclassing": {
+				"requirements": {
+					"dex": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light"
+					],
+					"weapons": [
+						"simple",
+						"shortswords",
+						"scimitars"
+					],
+					"tools":["One of:- Disguise Kit, Calligrapher's supplies, Painter's Supplies, Weaver's Tools, Woodcarver's Tools, Jeweler's Tools ,a musical instrument"]
+				}
+			},
+			"subclassTitle": "Choreurgic Style",
+			"fluff": [
+				{
+					"type": "section",
+                    "source":"tct",
+					"page": 1,
+					"name": "Flickwrist",
+					"entries": [
+						"A crowd gathers near the counter, eyes rapt with amazement as a man in rakish clothing bides their excitement by taking a swig of his flagon. He pauses a little. Then in a quick burst of motion, makes an elegant movement of his arm, Spinning his wrist and splays his fingers into a bystanders face as flames explode from his palm engulfing the woman's head in yellow fire. The panic from the crowd wanes when the woman gets up with not a single singed hair. He grins wide at the looks of astonishment and the excited murmurs.",
+				        "A captain watches with stern disappointment as she guides the hands of her nervous subordinates as they repeatedly attempt to motion a swift and complex set of movements. Try as they might, they just appear to be flailing their arms fruitlessly. Just as she begins to contemplate retiring the training session. Her despair lifts a little when, in the distance, she spots a bolt of fire impacting a training dummy leaving smolders.",
+				        "A man in strange foreign garb channels his rage into movement, controlled and serene. To his adventuring opponents he appears to be dancing but before he stops on a pose, a barrage of fire, lightning and ice seemingly erupt from his every limb, laying an elemental assault upon the inexperienced travelers.",
+				        "It is quite rare to find one proficient in the arcane. Though it may come from a myriad sources, the gift of magic remains to be rare in most. Perhaps one toiled away in a tower, meditating on the many theories and equation he found in their books. Or perhaps one derives her power from her connection to nature or a deity. And then there are some who are merely born with arcane potential. Rarer still are those few who may perform grand arcane feats requiring great magic potential. Knowing this, one might be discouraged ever attempting to gain any semblance of arcane power for it would seem to be that magic is only harnessed by the extraordinary. Seemingly defiant of that notion, A Flickwrist is considered to be one who utilizes the lesser magics present within all in the form of their spelldance. Growing slowly in arcane ability but making up for it in utilizing it.",
+				    {
+					"type": "entries",
+					"name": "Ex Laboris Arte",
+                    "source":"tct",
+					"entries": [
+						"Though some magic exists in everyone, to materialize and control it takes much practice. A Flickwrist translates their spells into movements that draw upon that innate power. It can be drawn from within through a basic grasp of the spell and controlled and swift gyrations. The translation of spell into movement, though easy for the mind, is difficult for the body to grasp. Adepts may come to realise that they are essentially speaking through motions but only masters are fluent enough to effectively express poetry through their motions as they reach a point where it is as if their body becomes capable of thinking for itself.",
+						"A Flickwrist will realize that it is not the spells that they are trying to master but their body. The energy present within is just the medium to that end. Through great dedication to their art they may achieve that and will be able to turn even this little speck of magic into a force wild and destructive in its capability."
+					]
+				    },
+				    {
+					"type": "entries",
+					"name": "Ex Omnis Magia",
+					"entries": [
+						"Flickwrists and Spelldancers can come from all walks of life. Perhaps they once saw their friend grow weeds from a wall with a mere wave of a hand. Or maybe one's mother had them tutored by a renowned spelldancer. Their curiosity is slowly replaced with a deep  passion for the art and the creation of something new. Their life thus revolves around the seeking of new inspirations for their craft or perhaps in the quest for its perfection.",
+						"When they set out for adventure they may do so seeking other spelldancers from foreign lands to observe their methods. Or perhaps they seek the chaos of battle where they may put their body to the test, seeing if it can act out of sheer instinct. Some may see nature itself as their muse and travel to distant, lurid lands to observe their environments in all its minutia from the gait of a river to the flight of a bee."
+					]
+				    }
+					]
+				},
+				{	
+					"name": "Flickwrist",
+					"type": "quote",
+                    "source":"tct",
+
+					"entries": [
+						"If you ask me, I think magic is safer with wizards and the like. Don't see them messing my tavern about.",
+                         "-Theev Bolidnessos, Tavernkeep"
+					]
+				}
+				
+			]
+		}	
+	],
+	"classFeature": [
+		{"name": "Choreurgy",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 1,
+			"entries": [
+				"As a Flickwrist your specialty is the learning and mastery of using your movements to cast Cantrips. You are able to cast these faster and with greater complexity while progressing in this class as you channel some of the magic to guide your movements. Like spell slots, a Flickwrist casts Cantrips using vigour slots. Depending on how a Flickwrist levels, his capacity of vigour slots and rate of its repletion increases.",
+				{
+					"type": "entries",
+					"name": "Choreurgic Capacity & Repletion",
+					"entries": [
+						"The amount of vigour slots a Flickwrist can store is his Choreurgic Capacity. When your character reaches the 5th, 11th and 17th level it goes up by one. Though Flickwrists can gain additional vigour slots at certain levels shown in the Flickwrist table.",
+						"During the course of a battle, spent vigour slots will recover at a certain rate. This rate is represented by your Choreurgic repletion. Your Character's level determines how many vigour slots he recovers.",
+						"It is 1 at 1st Level, then increases by 1 on the 5th, 11th and 17th level.",
+						"When you enter spelldance, you will recover an amount determined by your Choreurgic Repletion.",
+						"If you have entered spelldance by the time your turn ends, you will recover vigour slots according to your Choreurgic repletion."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spelldance",
+					"entries": [
+						"Instead of using an action to cast a Cantrip or some other feature that allows you to cast a Cantrip, you may instead briefly enter spelldance, a state of mental, physical and arcane union where you can cast multiple Cantrips. While in this state, you may expend vigour slots to cast cantrips without any action. You may move and take bonus actions and free actions while in this state and you may end it before your turn ends(no action required). You must leave spelldance to enter it again, and it ends when your turn does.",
+						"To do so you must spend at least one vigour slot for each Cantrip cast. You may choose to spend more on any of these Cantrip in which case it will become empowered.",
+						"If a Cantrip requires you to make a melee weapon attack you may only cast it this way a number of times allowed by an extra attack feature if you possess it.",
+						"Due to the cumbersome weight of Heavy and medium armor you cannot enter spelldance while they are equipped."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Empowered Cantrips",
+					"entries": [
+						"If more than one vigour slot is used to cast a Cantrip, any damage die involved in the Cantrip is incremented by the number of extra vigour slots used.",
+						"In the case of Eldritch Blast, you produce as many beams as the vigour slots spent to cast it."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Cantrips Known",
+					"entries": [
+						"At 1st level, you know three Cantrips of your choice from the wizard spell list. You learn one additional wizard Cantrip of your choice with each level gained in this class. The Cantrips you learn at 4th 8th 12th and 16th Level can be from any class. When you reach the 17th level in this class you learn all the Cantrips in the wizard spell list."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Cantrip Casting Ability",
+					"entries": [
+						"Dexterity is your spellcasting ability for casting Cantrips. Your finesse in its casting determines the spells potency. You use your Dexterity whenever a Cantrip refers to your Cantrip casting ability. You also use your Dexterity modifier when setting the saving throw DC for a wizard Cantrip you cast and when making an attack roll with one.",
+						{
+							"type": "abilityDc",
+							"name": "Spell",
+							"attributes": [
+								"dex"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "Spell",
+							"attributes": [
+								"dex"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Focus",
+					"entries": [
+						"You can use an article of clothing or a worn accessory as a spellcasting focus."
+					]
+				}
+			]
+		},
+		{"name": "Expertise",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 1,
+			"entries": [
+				"At 1st level, choose one of your skill proficiencies, a tool or musical instrument you're proficient with. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+				"At 6th level, you can choose one more of your proficiencies (in skills, tools or musical instruments) to gain this benefit."
+			]
+		},
+		{"name": "Choreurgic Style",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 2,
+			"entries": [
+				"At the 2nd Level, You choose a school of spelldance to guide your movements. Your choice grants you different features at 6th, 10th and 14th Levels."
+			]
+		},
+		{"name": "Spellcasting",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 3,
+			"entries": [
+				"When you reach 3rd level, In your pursuit to master the spelldance, you've achieved a semblance of arcane prowess. See chapter 10 of the PHB for the general rules of spellcasting and chapter 11 for the wizard spell list.",
+				{
+					"type": "entries",
+					"name": "Spell Slots",
+					"entries": [
+						"The Flickwrist spellcasting table shows how many spell slots you have to cast your wizard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest. For example, if you know the 1st-level spell shield and have a 1st-level and a 2nd-level spell slot available, you can cast shield using either slot."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spells Known of 1st-Level and Higher",
+					"entries": [
+						"At 1st level, You know three 1st-level wizard spells of your choice. The Spells Known column of the Flickwrist Spellcasting table shows when you learn more wizard spells of 1st level or higher. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 7th level in this class, you can learn one new spell of 1st or 2nd level.",
+						"Whenever you gain a level in this class, you can replace one of the wizard spells you know with another spell of your choice from the wizard spell list. The new spell must be of a level for which you have spell slots."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Dexterity is your spellcasting ability for casting cantrips. Your finesse in its casting determines the spells potency. You use your Dexterity whenever a Cantrip refers to your Cantrip casting ability. You also use your Dexterity modifier when setting the saving throw DC for a wizard Cantrip you cast and when making an attack roll with one.",
+						{
+							"type": "abilityDc",
+							"name": "Spell",
+							"attributes": [
+								"dex"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "Spell",
+							"attributes": [
+								"dex"
+							]
+						}
+					]
+				}
+			]
+		},
+		{"name": "Power Surge",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 3,
+			"entries": [
+				"At the 3rd Level, You gain the ability to Convert spell slots into vigour slots. You can use a bonus action to spend a spell slot and gain a number of vigour slots equal to the spell slot's level."
+			]
+		},
+		{"name": "Ability Score Improvement",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 4,
+			"entries": [
+				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM allows the use of feats, you may instead take a feat."
+			]
+		},
+		{"name": "Augments",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 5,
+			"entries": [
+				"At the 5th Level, You've learnt to channel the vigour within to perform various feats. When entering spelldance you can choose to spend some vigour slots to apply one augment to your spelldance. You learn to use two at this level and learn one more at 9th and 15th level.",
+				"When reaching a level in this class that grants a Feat or an ASI. you can choose to swap one of the Augments for another.",
+				{
+					"type": "entries",
+					"name": "Mummer's Dance",
+					"entries": [
+						"The Flickwrist spellcasting table shows how many spell slots you have to cast your wizard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest. For example, if you know the 1st-level spell shield and have a 1st-level and a 2nd-level spell slot available, you can cast shield using either slot."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Zephyr's Dance",
+					"entries": [
+						"When you enter spelldance you can use a bonus action and any number of vigour slots to gain movement equal to 5 ft. per slot. This movement provokes no opportunity attacks."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dance of Agony",
+					"entries": [
+						"You can spend 3 vigour slots on to enhance Cantrips cast within this spelldance. Any saving throw incurred by the Cantrip is made at disadvantage."
+					]
+				},{
+					"type": "entries",
+					"name": "Mollifying Dance",
+					"entries": [
+						"You can spend a vigour slot to impose a 1d4 penalty to creatures when making a saving throw for a Cantrip cast in the spell dance."
+					]
+				},{
+					"type": "entries",
+					"name": "Dance of Crashing Waves",
+					"entries": [
+						"You can spend a number of vigour slots on this dance. if a large or smaller creature fails a saving throw for one Cantrip cast in the spell dance it is pushed number of feet away or closer equal to 5 times the vigour slots used"
+					]
+				},{
+					"type": "entries",
+					"name": "Biding Dance",
+					"entries": [
+						"You can spend a vigour slot on this dance. The next spelldance you enter before the end of your next turn will grant you 2 additional vigour slots. This augment cannot be then used on that spelldance."
+					]
+				},{
+					"type": "entries",
+					"name": "Dance of the Spiral",
+					"entries": [
+						"You can spend a vigour slot to generate a strong dust devil from you till the beginning of your next turn. A spherical area of 10 ft. radius around you is difficult terrain for creatures besides you."
+					]
+				},{
+					"type": "entries",
+					"name": "Drunkard's Dance",
+					"entries": [
+						"You can spend a vigour slot to gain +2 to your AC till the beginning of your next turn."
+					]
+				},{
+					"type": "entries",
+					"name": "Dance of the Coiled Serpent",
+					"entries": [
+						"You can spend a vigour slot to extend your spelldance till the beginning of your next turn. While in this state you can cast Cantrips at any creature you can see that makes an attack roll without using your reaction provided it is in range of the Cantrip."
+					]
+				},{
+					"type": "entries",
+					"name": "Dance of Torn Mind",
+					"entries": [
+						"You may spend no vigour slots to enter this dance. While this dance is in effect, you may cast two Cantrips that require concentration and hold concentration on both of them. Though for as long as you hold concentration on both of them, your choreurgic repletion suffers by 1 vigour slot."
+					]
+				},{
+					"type": "entries",
+					"name": "Vengeful Dance",
+					"entries": [
+						"You may spend 2 vigour slots to enter a retaliatory state. Till the beginning of your next turn, Creatures that make an attack targeting you are marked till the end of your next turn. The first Cantrip cast at each of them will impose disadvantage for its saving throw."
+					]
+				}
+			]
+		},
+		{"name": "Style Feature",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 6,
+			"entries": [
+				"At the 6th Level, You gain a feature granted by your Choreurgic Style."
+			]
+		},
+		{"name": "Fleet of Foot",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 7,
+			"entries": [
+				"At the 7th Level, If you are affected by a spell that isn't targeting you, you can use your reaction to move 10 ft before it hits potentially avoiding damage. Additionally, While wearing light or no armour you gain 10 ft. of movement."
+			]
+		},
+		{"name": "Ability Score Improvement",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 8,
+			"entries": [
+				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM uses the optional Feats, you can instead take a feat."
+			]
+		},
+		{"name": "Potent Cantrip",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 9,
+			"entries": [
+				"At the 9th level, your damaging Cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your Cantrip, the creature takes half the Cantrip's damage (if any) but suffers no additional effect from the Cantrip.",
+				"Additionally, For the purposes of overcoming resistances, empowered cantrips count as a spell of as many levels as vigour slots used to cast it."
+			]
+		},
+		{"name": "Style Feature",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 10,
+			"entries": [
+				"At 7th Level, If you are affected by a spell that isn't targeting you, you can use your reaction to move 10 ft before it hits potentially avoiding damage."
+			]
+		},
+		
+		{"name": "Perpetual Motion",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 11,
+			"entries": [
+				"At the 11th Level, You can get up from being prone with only 5 feet of movement. Additionally difficult terrain does not hinder your movement."
+			]
+		},
+		{"name": "Ability Score Improvement",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 12,
+			"entries": [
+				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM uses the optional Feats, you can instead take a feat."
+			]
+		},
+		{"name": "Elastic body",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 13,
+			"entries": [
+				"At the 13th, You have advantage on all saving throws and checks to avoid or escape an effect that causes you to be grappled or restrained."
+			]
+		},
+		
+		{"name": "Style Feature",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 14,
+			"entries": [
+				"At the 14th Level, You gain a feature granted by your Choreurgic Style."
+			]
+		},
+		{"name": "Minor Magic Resistance",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 15,
+			"entries": [
+				"At the 15th Level, Coming to be quite familiar with Lesser Magics you've developed choreurgic counter measures against them. You have Advantage on saving throws against Cantrips and can spend a reaction and some vigour slots to gain advantage on a saving throw against spells up to the 3rd level. you must spend an amount equal to the spells level."
+			]
+		},
+		{"name": "Ability Score Improvement",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 16,
+			"entries": [
+				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM uses the optional Feats, you can instead take a feat."
+			]
+		},
+		{"name": "Cantrip Mastery",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 17,
+			"entries": [
+				"At the 17th Level, You gain access to all Cantrips that can be learnt by a wizard."
+			]
+		},
+		{"name": "Esoteric techniques",
+			"source": "tct",	
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 18,
+			"entries": [
+				"At the 18th Level, Great effort and experimentation has allowed you to simplify leveled spells. Pick two level 1 spells requiring an action to cast that you know. They are now Cantrips for you and won't count towards spells known."
+			]
+		},
+		{"name": "Ability Score Improvement",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 19,
+			"entries": [
+				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+				"If your DM uses the optional Feats, you can instead take a feat."
+			]
+		},
+		{"name": "Opus Vitae",
+			"source": "tct",
+			
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"level": 20,
+			"entries": [
+				"You've toiled away your entire life to reach here. What you have been working towards represents one of these features you shall receive. At the 20th Level you may choose one of the following features:-",
+				{
+					"type": "entries",
+					"name": "Magisterium Corporum",
+					"entries": [
+						"Your Choreurgic repletion increases by two."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Magnum Opus",
+					"entries": [
+						"Choose a 3rd level spell that you know. This spell becomes your Magnum Opus. You may cast this spell as a Cantrip during spelldance by expending 3 vigour slots a number of times equal to your Intelligence Modifier per day."
+					]
+				}
+			]
+		}
+	],
+	"subclassFeature": [
+		{"name": "Way of Awakened Mind",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 3,
+			"entries": [
+				"Old Livian tales speak of strangely garbed men who broke upon the shores of Yesvaris on strange boats from a sea that surrounds no land. They bore no blade nor bow, spoke no tongue that one could understand, bearing no message nor gift for any lord, instead they were content to merely wander the earth.",
+				"Little was spoken yet some could detect some deep disappointment. They sold their ships and settled into a refuge atop Mt. Songshan. There they would live mostly in isolation, far from the squabbling tribes below for a few centuries.",
+				"Only during the invasions of Gulbrodr, the Reaver King did they swear fealty to Seauntrenu the Strange under the agreement that he or anyone else may seek tutelage from the monastery if their devotion was deemed enough.",
+				"A few of the acolytes there would learn of a way to seemingly poke and prod their sight through to a second world held within the future. Though some believe it demeaning to utilize such a blessing for combat, rogue schools doing just that would eventually rise, with the original purpose lost to time.",
+				"Heretical though it may been to some, it proved to be a very effective method of combat.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Premonition|Monk||Awakened Mind|tct|3"
+				},	
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Pass the time|Monk||Awakened Mind|tct|3"
+				}	
+			]
+		},
+		{"name": "Premonition",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 3,
+			"entries": [
+				"As a bonus action, you slip into one of two lucid states where you perceive glimpses into the near future:-",
+				{
+					"type":"entries",
+					"name":"Vulpine",
+					"entries": [
+						"As part of the bonus action and at the start of each of your turns while you are in the state, make a Premonition check (a DC 15 Wisdom check). On a success, roll a Premonition die which is a d20 and keep it with it's result. Whenever a feature calls for spending a Premonition die, you must possess and spend at least one ki point to use it.",
+						"Whenever you or a creature you see within 10 ft. makes an attack roll or a saving throw you may replace the roll with the Premonition die's roll, spending it.",
+						"Any Premonition die gained, lasts only till the start of your next turn, unless you spend a ki point then. If you do, you forgo making the Premonition check for that turn and keep the Premonition die from the previous turn.",
+						"This state lasts for a minute, after which any Premonition die possessed are discarded."
+					]
+				},
+				{
+					"type":"entries",
+					"name":"Cervine",
+					"entries": [
+						"For this turn and for the next 10 minutes, you gain advantage on all ability checks."
+					]
+				},
+				"Once you enter any of these states, you must take a long rest to regain use of it."
+			]
+		},
+		{"name": "Pass the time",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 3,
+			"entries": [
+				"As part of your rigorous training, you would learn to pick up many games of luck or skill. In each bout, acolytes would attempt to utilize their unnatural foresight against each other in what was essentially a contest to peer further into the future than their opponent.",
+				"Choose a {@item Gaming Set}. You become proficient with it and any checks made with Gaming Sets are made with advanatage."
+			]
+		},
+		{"name": "Peel back the Veil",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 6,
+			"entries": [
+				"You achieve the first step towards understanding the nature of this world, utilizing your learnings as abilities.",
+				"Wou may spend two ki points to cast {@spell Augury}, {@spell Locate Object}, {@spell Find Traps} or {@spell Fortune's Favor|EGW} (without the spells material components).",
+				"Additionally, When you have no uses of Premonition, you can use a number of ki points equal to your proficiency bonus at the end of a short rest to regain use of it."
+			]
+		},
+		{"name": "Living ahead of the moment",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 11,
+			"entries": [
+				"You have spent such time peering across the temporal realm that you have mastered it's interference with your reality. You gain the following benefits:-",
+				{
+					"type":"list",
+					"items":[
+						"When you make a Premonition check or when rolling for your Premonition die, you may use a bonus action and ki point to reroll the d20.",
+						"You may now attempt to replace the rolls of creatures you can see with Premonition die's within 20 ft. of you, instead of 10 ft..",
+						"When you roll a d20 on your Premonition die, you may immediately spend it to get advantage on all attacks and saving throws for this turn."
+					]
+				}
+			]
+		},
+		{"name": "A Body one with the Future",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 17,
+			"entries": [
+				"At 17The barriers to the temporal realm now remain a mere curtain for your mind and can even twist the threads of fate to some extent. You gain the follwoing features",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Predictive Impulse|Monk||Awakened Mind|tct|17"
+				},	
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Forge Fate|Monk||Awakened Mind|tct|17"
+				}	
+			]
+		},
+		{"name": "Predictive Impulse",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 17,
+			"entries": [
+				"Whenever you use the attack action you may spend a Premonition die to make an additional attack using the result on it as the roll. Additionally, when you dodge an attack using a Premonition die, the next attack made against you is made with disadvantage till the state ends."
+			]
+		},
+		{"name": "Forge Fate",
+			"className": "Monk",
+			"source": "tct",
+			"classSource": "PHB",
+			"subclassShortName": "Awakened Mind",
+			"subclassSource": "tct",
+			"level": 17,
+			"entries": [
+				"Once per long rest, when you roll your Premonition die, you may instead choose a number from 5-15 and keep the Premonition die with that number."
+			]
+		},
+		{"name": "Style of Poise",
+			"className": "Flickwrist",
+			"source": "tct",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"subclassSource": "tct",
+			"level": 2,
+			"entries": [
+				"Within the spelldance it is prefered by most choreurgists to be wielding nothing as any unnecessary weight hinders the ability to motion fast and precisely. Practitioners of the School of Poise learn to integrate weapons into their spelldance.",
+				"They Allow their body to meld with the weapon by adapting to their weapon's heft and wieldiness. If they manage to integrate it into their body, perhaps they may even cast spells through them.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Poise Spells|Flickwrist|tct|Poise|tct|2"
+				},	
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Balance Training|Flickwrist|tct|Poise|tct|2"
+				}	
+			]
+		},
+		{"name": "Poise Spells",
+			"className": "Flickwrist",
+			"source": "tct",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Poise Spells table. These spells count as Flickwrist spells for you, but they don't count against the number of Flickwrist spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Poise Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"2nd",
+							"True Strike"
+						],
+						[
+							"3rd",
+							"Mage Armor"
+						],
+						[
+							"7th",
+							"Misty Step"
+						],
+						[
+							"13th",
+							"Elemental Weapon"
+						],
+						[
+							"19th",
+							"Staggering Smite"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Balance Training",
+			"source": "tct",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"You gain proficiency with a weapon that possesses the finesse property of your choice.",
+				"You must spend time before a long rest training with a weapon with the finesse property that you are proficient in, to get used to its weight and form after which it becomes your Poise weapon. Any such weapon of similar make can then be used as your poise weapon.",
+				"Your poise weapon becomes an arcane focus for you. When you cast spells, you can cast them through this weapon.",
+				"You may know only one poise weapon as it takes time adjusting to another. While wielding Poise weapons and no other weapons nor shields, you gain all of this subclasses features."
+				]
+		},
+		{"name": "Extra Attack",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
+			]
+		},		
+		{"name": "Fencer's Dance",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"subclassSource": "tct",
+			"source": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Augment. You can spend one vigour slot when entering spelldance to grant yourself additional reach of 5 ft. and extend the range of Cantrips with a range of Self(5 feet) to the reach of your weapon."
+			]
+		},
+		{"name": "Insightful Strike",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Once per turn, When you successfully land a melee attack on a creature, you create an opening for yourself. The creature will suffer a disadvantage on a saving throw for the next Cantrip you cast at that creature till the beginning of your next turn."
+			]
+		},
+		{"name": "Clairvoyant Strike",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Poise",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Enchances True Strike. When you cast true strike, it's benefits are instead applied to the next weapon attack."
+			]
+		},
+		{"name": "Style of Forte",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"entries": [
+				"Cantrips on their own are too simple a spell to reach any height of power. Followers of the school of Forte recognize a method of casting them deemed unorthodox and unstable. They tap into an inner chaos present within their spelldance and the spells they cast, Sacrificing safety and certainty to unlock it's potential to wreak untold amounts of destruction.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Forte Spells|Flickwrist|tct|Forte|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Interference|Flickwrist|tct|Forte|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Overloaded|Flickwrist|tct|Forte|tct|2"
+				}
+			]
+		},
+		{"name": "Forte Spells",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Forte Spells table. These spells count as Flickwrist spells for you, but they don't count against the number of Flickwrist spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Forte Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"2nd",
+							"Fire Bolt"
+						],
+						[
+							"3rd",
+							"Chaos Bolt"
+						],
+						[
+							"7th",
+							"Melf's Acid Arrow"
+						],
+						[
+							"13th",
+							"Lightning Bolt"
+						],
+						[
+							"19th",
+							"Ice Storm"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Interference",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"If you cast a damaging Cantrip which targets a single creature and it fails its saving throw, The damage roll it receives may increase the damage. If any number is repeated in the damage roll, you must add it again to the total damage.",
+				"This feature must be used after rerolling any damage dice"
+			]
+		},
+		{"name": "Overloaded",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Your Choreurgic Capacity increases by 1."
+			]
+		},
+		{"name": "Dance of Synchronicity",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Augment. You can spend one vigour slot when you enter this dance to be able to reroll one damage of each Cantrip cast within the spelldance."
+			]
+		},
+		{"name": "Constructive Interference",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Enhances interference. When two of the damage dice roll the same even number, you can target a second creature with the same Cantrip within its range."
+			]
+		},
+		{"name": "Destructive Interference",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"subclassSource": "tct",
+			"source": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Enhances interference. For every repeated odd number that appears, the radius of a spherical area of effect grows by 10 ft. centered at the target. Every creature in that area receives half the total damage of the corresponding damage type."
+			]
+		},
+		{"name": "Enhanced Modulation",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Forte",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"When you use the Dance of Synchronicity augment, you can now reroll 2 damage dice per Cantrip."
+			]
+		},
+		{"name": "Style of Fervour",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"entries": [
+				"In the arduous course of memorizing and repetition, you've taken a keen interest in the elemental nature of the spells you cast and the effects of your innate zeal in fueling them. In this journey, you gain greater insight into the elements, their reactions to the creatures they affect and perhaps more importantly, ways to protect against them.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fervour Spells|Flickwrist|tct|Fervour|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Analysis|Flickwrist|tct|Fervour|tct|2"
+				}
+			]
+		},
+		{"name": "Fervour Spells",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Fervour Spells table. These spells count as Flickwrist spells for you, but they don't count against the number of Flickwrist spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Fervour Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"2nd",
+							"Light"
+						],
+						[
+							"3rd",
+							"Chromatic Orb"
+						],
+						[
+							"7th",
+							"Invisibility"
+						],
+						[
+							"13th",
+							"Protection from Energy"
+						],
+						[
+							"19th",
+							"Aura of Life"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Analysis",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Once per turn, when a creature you can see is affected by a Cantrip you cast, you can check To see if the creature was resistant, immune or vulnerable to the damage type."
+			]
+		},
+		{"name": "Prismatic Guard",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"If you cast a Cantrip that deals damage, you can choose to become resistant to its damage type till the start of your next turn. You can invoke this resistance a number of times equal to your Intelligence modifier before each long rest."
+			]
+		},
+		{"name": "Dance of Shattered Light",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Augment. You can spend one vigour slot to change the damage type of any Cantrips cast within the spelldance."
+			]
+		},
+		{"name": "Chromatic Cascade",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"For each Cantrip you cast previously within the spelldance that dealt a different damage type, you deal an additional point of damage of the corresponding type when casting a Cantrip."
+			]
+		},
+		{"name": "Prismatic Ward",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Fervour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"As a bonus action you can pick two willing creatures within 30ft of you. They will receive the benefit of your Prismatic Guard while they are in range."
+			]
+		},
+		{"name": "Style of Rigour",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"entries": [
+				"There's more to casting than shaking a hand and uttering some words. Perhaps those that follow the school of Rigour understand this more than most. They view Choreurgy and minor magics as a science to be thoroughly studied and grasped. Cantrips and the arcane motion are equations on a parchment that need to be broken down and rebuilt constantly to achieve the most efficiency. With enough experimentation they hope to engineer movements so complex that it would be as if you were dancing with two bodies.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Rigour Spells|Flickwrist|tct|Rigour|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Cantrip Efficiency|Flickwrist|tct|Rigour|tct|2"
+				}
+			]
+		},
+		{"name": "Rigour Spells",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Rigour Spells table. These spells count as Flickwrist spells for you, but they don't count against the number of Flickwrist spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Rigour Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"2nd",
+							"Guidance"
+						],
+						[
+							"3rd",
+							"Detect Magic"
+						],
+						[
+							"7th",
+							"Silence"
+						],
+						[
+							"13th",
+							"Haste"
+						],
+						[
+							"19th",
+							"Mordenkainen's Private Sanctum"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Cantrip Efficiency",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"You've created a method to make the spelldance itself more efficient. You can add your intelligence modifier to the total Damage roll of your Cantrips."
+			]
+		},
+		{"name": "Torrential Dance",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Augment. You can spend two vigour slots to modify your Cantrips, enabling them to disrupt your opponents ability to resist the effects of your Cantrips. When a creature fails a saving throw of a Cantrip cast in this spelldance, it becomes debilitated till the end of your next turn. While this way, it has disadvantage against the debilitating saving throw for Cantrips you cast."
+			]
+		},
+		{"name": "Vigorous Transmutation",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Your study into the nature of surge conversion has yielded a more efficient method of transmuting vigour slots. When you use the power surge feature to convert spell slots, you get one additional vigour slot."
+			]
+		},
+		{"name": "Metachoreurgy",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Rigour",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"You've learnt to tap into a 'Second Body'. Controlling it allows you to push the intricacy of your spelldance to new frontiers. When you enter Spelldance, you can apply two augments at the same time.",
+				"Additionally, if you choose to only use one augment, Cantrips you cast within the spelldance do not require a somatic component."
+			]
+		},
+		{"name": "Style of Grace",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"entries": [
+				"Practitioners of the style of grace are able to channel their dance into a sight of placidity, easing the stressed and benumbing the hurt. Due to their limited arcane capability they do not make for effective healers but through their soothing dance they are capable of numbing pain and easing suffering, allowing those under their care to fight just that little bit longer or at the very least, carry the wounded to safety.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Grace Spells|Flickwrist|tct|Grace|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Lesser Healer|Flickwrist|tct|Grace|tct|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "First Response|Flickwrist|tct|Grace|tct|2"
+				}
+			]
+		},
+		{"name": "Grace Spells",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Grace Spells table. These spells count as Flickwrist spells for you, but they don't count against the number of Flickwrist spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Grace Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"2nd",
+							"Spare the Dying"
+						],
+						[
+							"3rd",
+							"False Life"
+						],
+						[
+							"7th",
+							"Gentle Repose"
+						],
+						[
+							"13th",
+							"Fast Friends"
+						],
+						[
+							"19th",
+							"Death Ward"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Lesser Healer",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"You gain proficiency with the herbalism kit. If you are already proficient in it you may choose a tool proficiency from the possible Flickwrist's tool proficiencies."
+			]
+		},
+		{"name": "First Response",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Modifies Spare the Dying. When you cast Spare the Dying on a dying creature you may revive it with 1 hit point. However for each time it has been revived this way since it's last long rest, it will automatically fail that many death saves when they begin dying again."
+			]
+		},
+		{"name": "Preserver's Dance",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Augment. You may spend one vigour slot when entering spell dance to give your Cantrips a soothing byproduct. When you cast a Cantrip during this dance, roll a number of d6s equal to the vigour slots used. You may grant a creature of your choice within the Cantrip's range the resulting total as temporary hitpoints. You may use this dance a number of times equal to your proficiency bonus. When you reach the 10th and 14th level the d6s become d8s and d10s respectively."
+			]
+		},
+		{"name": "Placating Presence",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"When making a Charisma(Persuasion) or a Charisma(Deception) check you can add your Wisdom Modifier to it."
+			]
+		},
+		{"name": "Lulling Balm",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"If you have 4 vigour slots, as an action, you may initiate a hypnotic performance. 6 Creatures of your choice that can see you and that you can see must make Wisdom Saving Throws against your Cantrip Save DC. On a failure, they are then Blinded or Charmed. If Charmed, they move at half speed and cannot take any actions that harm other creatures. They can repeat the saving throw at the end of their turns."
+			]
+		},
+		{"name": "Swansong",
+			"className": "Flickwrist",
+			"classSource": "tct",
+			"subclassShortName": "Grace",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"When using the First Response feature, You are able to tap into an energy reserve innate within the creature. The creature being revived can expend upto half of his remaining hit dice (rounded up) to heal itself."
+			]
+		},
+		{"name": "Saboteur",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 3,
+			"entries": [
+				"When the Livian 12th Engineer corps trained their first Saboteurs, they expected them to infiltrate enemy lines in disguise and wreak havoc in their most crucial moments. Not only did they succeed in that front, their purpose has expanded in many directions since then. Finding use even in the front lines where they would wield a mechanism acting as a third arm to operate their complex devices.",
+				"Though proving to be highly effective, they would come back to bite the Livian empire. With the onset of the peace of the 11th Era, branches of the military would slowly dissolve into mercenary corps. The many princes, dukes  and merchant lords would come to find the saboteurs’ expertise invaluable in setting their competition back a few years.",
+				{	
+					"name": "Saboteur",
+					"type": "quote",
+					"entries": [
+						"The war is not yet over. All that has changed are the front lines."
+					],
+					"by": "Thraccis 3rd Valembrose, Diplocrat Interna"
+				},
+				
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Saboteur Spells|Artificer|TCE|Saboteur|tct|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tool Proficiency|Artificer|TCE|Saboteur|tct|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Third Arm|Artificer|TCE|Saboteur|tct|3"
+				}
+			]
+		},
+		{"name": "Saboteur Spells",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Saboteur Spells table. These spells count as Artificer spells for you, but they don't count against the number of Artificer spells you prepare.",
+				{
+					"type": "table",
+					"caption": "Saboteur Spells",
+					"colLabels": [
+						"Level",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"3rd",
+							"{@spell grease|phb|grease}, {@spell expeditious retreat|phb|expeditious retreat}"
+						],
+						[
+							"5th",
+							"{@spell mirror image|phb|mirror image}, {@spell maximillian's earthen grasp|xge|maximillian's earthen grasp}"
+						],
+						[
+							"9th",
+							"{@spell fear|phb|fear}, {@spell erupting earth|xge|erupting earth}"
+						],
+						[
+							"13th",
+							"{@spell hallucinatory terrain|phb|hallucinatory terrain}, {@spell confusion|phb|confusion}"
+						],
+						[
+							"17th",
+							"{@spell mislead|phb|mislead}, {@spell far step|xge|far step}"
+						]
+					]
+				}
+			]
+		},
+		{"name": "Tool Proficiency",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"When you adopt this specialization at 3rd level, you gain proficiency with Mason’s Tools and Alchemist’s Tools. If you already have either of these proficiencies, you gain proficiency with one other type of artisan's tools of your choice."
+			]
+		},
+		{"name": "Third Arm",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"At 3rd level, you learn to magically transform your Mason’s Tools into a contraption that functions as a third arm. Once a day, you can spend an hour to produce your third arm from your Mason’s Tools. Only when this third arm is wielded by you can you utilise the rest of this feature. While wielding it, it can be utilized as a set of Mason’s Tools.",
+				"The Hand is a tiny magical object that shares its initiative with you. Additionally you use your actions and its actions in any order. While it is being wielded it can be in your space but cannot move more than 5 feet away from you and has a movement speed of half of the wearer(rounded down). ",
+				"If the arm is not wielding anything you can use a bonus action to perform the following with it:-",
+				{
+					"type": "entries",
+					"name": "Slip Away",
+					"entries": [
+						"The arm aids provides a distraction, allowing you to disengage"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Protect",
+					"entries": [
+						"The arm readies into a defensive stance reducing damage at some cost to its structural integrity. If you are hit  and take piercing,bludgeoning or slashing damage,you may reduce the damage by 1d8 and instead apply it to the hand."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Repair",
+					"entries": [
+						"(2/Day). The hands innate magic restores 2d8 + PB hit points to itself or to one construct or object within 5 feet of it."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dodge",
+					"entries": [
+						"The arm anticipates any attack made against it. It gains the benefits of a Dodge action."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Help",
+					"entries": [
+						"You or another creature within the arm's reach gains the benefit of a help action. When done this way, it does not grant advantage on skill checks."
+					]
+				},
+				"If a bonus action wasn’t used to activate it and isn’t wielding anything, it will automatically perform the dodge action.",
+				"The arm has an AC of 13 + your Proficiency Bonus and a number of hit points equal to four times your artificer level. It is immune to poison damage and psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the mending spell is cast on it, it regains 2d6 hit points. It disappears after 1 hour or if it is reduced to 0 hit points.",
+				"You may determine the arms appearance when you create it. It consists of a base that is worn on your body and the appendage which may range in appearance as an arm with many joints, to a tentacle resembling a spine, to a floating claw."
+			]
+		},
+		{"name": "Apprentice Arsonist",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"At 3rd level, Your knowledge in volatile alchemy has granted you the ability to create Bombs. Using your Alchemist’s Tools you may create a number of them equal to your proficiency bonus during a short or long rest. Creating more than that will result in the oldest bomb turning inert and disintegrating. Bombs that are not on your person begin to decay and will too turn inert and disintegrate after a days time has passed.",
+				"While you possess these bombs, you may use an action to throw them upto 20 feet away after which they will explode on impact, affecting creatures in a spherical area.",
+				"When you create the bombs you can determine its type from the the following",
+				{
+					"type": "entries",
+					"name": "Fireworks",
+					"entries": [
+						"Subjects Creatures in a 15 foot radius to a Dexterity Saving Throw. Deals 3d10 Fire Damage on a failure."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sunburst",
+					"entries": [
+						"Subjects Creatures in a 10 foot radius to a Constitution Saving Throw. Deals 3d8 Radiant Damage and Blinds them on a failure."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Impellors",
+					"entries": [
+						"Subjects Creatures in a 20 foot radius to a Strength Saving Throw. Deals 3d8 Thunder Damage and throws them back 10 foot on a failure."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Box of Nox",
+					"entries": [
+						"Subjects Creatures in a 10 feet radius to a Constitution Saving Throw. Deals 4d4 Poison Damage and they become poisoned."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Canned Fog",
+					"entries": [
+						"Produces the Fog Cloud Spell Effect at the point of impact."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Wurmbite",
+					"entries": [
+						"Subjects Creatures in a 20 feet radius to a Dexterity Saving Throw. Deals 4d6 Acid Damage and another 2d6 on the start of its turn on a failure. And half as much on a success."
+					]
+				}
+			]
+		},
+		{"name": "Extra Attack",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				"Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn. Instead of one of the attacks, you can throw a bomb."
+			]
+		},
+		{"name": "Insurgency Training",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 5,
+			"header": 2,
+			"entries": [
+				{
+					"type":"list",
+					"items":[
+						"You can cast spells from your Third Arm and while it is not wielding anything, you gain a climbing speed of 15 feet.",
+						"When a bomb damages an object that isn’t being worn or carried, depending on the material of the object and the bomb used, it deals critical damage. For dirt and/or stone, an Impeller, For Metal a Wurmbite, For wood a Fireworks."
+					]
+				}
+			]
+		},
+		{"name": "Explosives Expert",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"Starting at 9th level, you can increase the potency of your explosives.",
+				{
+					"type":"list",
+					"items":[
+						"Your Bombs deal an additional dice of damage of its damage type if it can deal damage.",
+						"You gain the ability to plant bombs and explode them remotely. When you use a bomb to interact with an object, you may affix the bomb to it given that it is not being worn or carried.You may then set a timer for when it explodes(Remember that a bomb may become inert after a days time from creation has passed). Or you may activate one of your choice with a bonus action. A bomb that is damaged by another bomb will automatically explode."
+					]
+				}
+			]
+		},
+		{"name": "Pyrotechnic Pandemonium",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"subclassShortName": "Saboteur",
+			"source": "tct",
+			"subclassSource": "tct",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Starting at 15th level, Once you breach the enemy’s lines, you turn into the very spirit of chaos.",
+				{
+					"type":"list",
+					"items":[
+						"On your first round of combat, you can utilize your arms functions using a free action",
+						"Once per short/long rest, You can use a bonus action to throw 3 grenades with your third arm. Creatures affected must also make a Wisdom saving throw. On a failed save, a creature becomes frightened of you for 1 minute. The frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			]
+		}
+	],
+	"magicvariant": [
+		{
+			"name": "Ravaging Weapon",
+            "type":"GV",
+			"requires": [
+				{
+					"name": "Sickle"
+				},
+				{
+					"name": "Greataxe"
+				},
+				{
+					"name": "Battleaxe"
+				},
+				{
+					"name": "Double-Bladed Scimitar"
+				},
+				{
+					"name": "Glaive"
+				},
+				{
+					"name": "Greatsword"
+				},
+				{
+					"name": "Halberd"
+				},
+				{
+					"name": "Handaxe"
+				},
+				{
+					"name": "Knuckle Knives"
+				},
+				{
+					"name": "Longsword"
+				},
+				{
+					"name": "Scimitar"
+				},
+				{
+					"name": "Whip"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Ravaging ",
+                "page":0,
+				"source": "tct",
+				"rarity": "uncommon",
+				"entries": [
+					"The result of a failed enchantment. These weapons' blade edge throb with a volatile keenness"
+				]
+			}
+		}
+	],
+	"race": [
+		{"name": "Leberi(Gelas'Bat)",
+			"source": "tct",
+			"size": [
+				"M"
+			],
+			"speed":{
+				"walk":35,
+				"climb":15
+			},
+			"resist": [
+				"poison"
+			],
+			"ability": [
+				{
+					"cha": 1,
+					"con": 2
+				}
+			],
+			"darkvision": 60,
+			"entries": [
+				{
+					"name": "Age",
+					"type": "entries",
+					"entries": [
+						"A Leberi grows to be a teen at around the same age as humans though they age slower afterwards, living to be around 130 years old though some live upto 150 years."
+					]
+				},
+				{
+					"name": "Alignment",
+					"type": "entries",
+					"entries": [
+						"A Leberi’s concerns tend to start and end with themselves and those of close relation when in Leberi Society, Staying neutral most of the time. When taken out of their element though, they may align extremely in any direction."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"Leberi Tend to be a little taller than humans on average and weigh a little less. Your size is Medium"
+					]
+				},
+				{
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Pungent Blood",
+					"entries": [
+						"Your blood has the strange property of being thicker. You are resistant to Poison Damage and Immune to Diseases."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Natural Escaladers",
+					"entries": [
+						"Your long, warped and rubbery fingers allow for a firmer grip granting you a climbing speed of 15 ft."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Sensory Sacrifice",
+					"entries": [
+						"Depending on the circumstance of your birth you may have lost one or more senses to gain a boon granted as an eldritch invocation. This invocation must not have any prerequisites. You may lose Smell and Taste, Sight or Hearing."
+					],
+					"type": "entries"
+				},				
+				{
+					"name": "Language",
+					"entries": [
+						"You speak Liberian and 1 language of your choice."
+					],
+					"type": "entries"
+				}
+			]
+		},
+		{"name": "Leberi(Mayra'Bat)",
+			"source": "tct",
+			"size": [
+				"M"
+			],
+			"speed":{
+				"walk":35,
+				"climb":15
+			},
+			"resist": [
+				"poison"
+			],
+			"ability": [
+				{
+					"wis": 1,
+					"con": 2
+				}
+			],
+			"darkvision": 60,
+			"entries": [
+				{
+					"name": "Age",
+					"type": "entries",
+					"entries": [
+						"A Leberi grows to be a teen at around the same age as humans though they age slower afterwards, living to be around 130 years old though some live upto 150 years."
+					]
+				},
+				{
+					"name": "Alignment",
+					"type": "entries",
+					"entries": [
+						"A Leberi’s concerns tend to start and end with themselves and those of close relation when in Leberi Society, Staying neutral most of the time. When taken out of their element though, they may align extremely in any direction."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"Leberi Tend to be a little taller than humans on average and weigh a little less. Your size is Medium"
+					]
+				},
+				{
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Pungent Blood",
+					"entries": [
+						"Your blood has the strange property of being thicker. You are resistant to Poison Damage and Immune to Diseases."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Natural Escaladers",
+					"entries": [
+						"Your long, warped and rubbery fingers allow for a firmer grip granting you a climbing speed of 15 ft."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Sensory Sacrifice",
+					"entries": [
+						"Depending on the circumstance of your birth you may have lost one or more senses to gain a boon granted as an eldritch invocation. This invocation must not have any prerequisites. You may lose Smell and Taste, Sight or Hearing."
+					],
+					"type": "entries"
+				},				
+				{
+					"name": "Language",
+					"entries": [
+						"You speak Liberian and 1 language of your choice."
+					],
+					"type": "entries"
+				}
+			]
+		},
+		{"name": "Half Leberi",
+			"source": "tct",
+			"size": [
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"swim": 15
+			},
+			"ability": [
+				{
+					"wis": 1,
+					"cha": 2
+				}
+			],
+			"darkvision": 60,
+			"languageProficiencies": [
+				{
+					"common": true
+				}
+			],
+			"entries": [
+				{
+					"name": "Age",
+					"type": "entries",
+					"entries": [
+						"Half-Leberi grow into their teens the same time humans do and possess some facet of their Leberi Longevity living to be around 110 years."
+					]
+				},
+				{
+					"name": "Alignment",
+					"type": "entries",
+					"entries": [
+						"Fiercely argumentative, the Leberi tend to sit anywhere in terms of alignment except on the fence."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"Half Leberi are aren't too dissimilar from humans in body proportion, though they tend to be more lean. Your size is Medium."
+					]
+				},
+				{
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Sour Blood",
+					"entries": [
+						"You have advantage against saving throws involving poison damage and Disease."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Seabound",
+					"entries": [
+						"Swimming comes naturally to you. You gain a swim speed of 15 ft."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Skilled Artisan",
+					"entries": [
+						"You become proficient in any one skill and either one set of tools or one weapon."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Otherworldly Trace",
+					"entries": [
+						"You can attune to 1 additional item as long as one of the items you’re attuned to is a tattoo."
+					],
+					"type": "entries"
+				},
+				{
+					"name": "Language",
+					"entries": [
+						"Common, Leberi and one other language."
+					],
+					"type": "entries"
+				}
+			]
+		}
+	],
+	"subclass": [
+		{
+			"name": "Saboteur",
+			"shortName": "Saboteur",
+			"source": "tct",
+			"subclassFeatures": [
+				"Saboteur|Artificer|TCE|Saboteur|tct|3",
+				"Extra Attack|Artificer|TCE|Saboteur|tct|5",
+				"Insurgency Training|Artificer|TCE|Saboteur|tct|5",
+				"Explosives Expert|Artificer|TCE|Saboteur|tct|9",
+				"Pyrotechnic Pandemonium|Artificer|TCE|Saboteur|tct|15"
+			],
+			"className": "Artificer",
+			"classSource": "TCE"
+		},
+		{
+			"name": "Way of Awakend Mind",
+			"shortName": "Awakened Mind",
+			"source": "tct",
+			"subclassFeatures": [
+				"Way of Awakened Mind|Monk||Awakened Mind|tct|3",
+				"Peel back the Veil|Monk||Awakened Mind|tct|6",
+				"Living ahead of the moment|Monk||Awakened Mind|tct|11",
+				"A Body one with the Future|Monk||Awakened Mind|tct|17"
+			],
+			"className": "Monk",
+			"classSource": "PHB"
+		},
+		{"name": "Style of Poise",
+			"subclassFeatures": [
+				"Style of Poise|Flickwrist|tct|Poise|tct|2",
+				"Extra Attack|Flickwrist|tct|Poise|tct|6",
+				"Fencer's Dance|Flickwrist|tct|Poise|tct|6",
+				"Insightful Strike|Flickwrist|tct|Poise|tct|10",
+				"Clairvoyant Strike|Flickwrist|tct|Poise|tct|14"
+			],
+			"source": "tct",
+			"shortName": "Poise",
+			"className":"Flickwrist",
+			"classSource":"tct"
+		},
+		
+		{"name": "Style of Fervour",
+			"subclassFeatures": [
+				"Style of Fervour|Flickwrist|tct|Fervour|tct|2",
+				"Prismatic Guard|Flickwrist|tct|Fervour|tct|6",
+				"Dance of Shattered Light|Flickwrist|tct|Fervour|tct|6",
+				"Chromatic Cascade|Flickwrist|tct|Fervour|tct|10",
+				"Prismatic Ward|Flickwrist|tct|Fervour|tct|14"
+			],
+			"source": "tct",
+			"shortName": "Fervour",
+			"className":"Flickwrist",
+			"classSource":"tct"
+		},
+		{"name": "Style of Forte",
+			"subclassFeatures": [
+				"Style of Forte|Flickwrist|tct|Forte|tct|2",
+				"Dance of Synchronicity|Flickwrist|tct|Forte|tct|6",
+				"Constructive Interference|Flickwrist|tct|Forte|tct|10",
+				"Destructive Interference|Flickwrist|tct|Forte|tct|10",
+				"Enhanced Modulation|Flickwrist|tct|Forte|tct|14"
+			],
+			"source": "tct",
+			"shortName": "Forte",
+			"className":"Flickwrist",
+			"classSource":"tct"
+		},
+		{"name": "Style of Rigour",
+			"subclassFeatures": [
+				"Style of Rigour|Flickwrist|tct|Rigour|tct|2",
+				"Torrential Dance|Flickwrist|tct|Rigour|tct|6",
+				"Vigorous Transmutation|Flickwrist|tct|Rigour|tct|10",
+				"Metachoreurgy|Flickwrist|tct|Rigour|tct|14"
+			],
+			"source": "tct",
+			"shortName": "Rigour",
+			"className":"Flickwrist",
+			"classSource":"tct"
+		},
+		{"name": "Style of Grace",
+			"subclassFeatures": [
+				"Style of Grace|Flickwrist|tct|Grace|tct|2",
+				"Preserver's Dance|Flickwrist|tct|Grace|tct|6",
+				"Placating Presence|Flickwrist|tct|Grace|tct|10",
+				"Lulling Balm|Flickwrist|tct|Grace|tct|10",
+				"Swansong|Flickwrist|tct|Grace|tct|14"
+			],
+			"source": "tct",
+			"shortName": "Grace",
+			"className":"Flickwrist",
+			"classSource":"tct"
+		}
+	]
+}
